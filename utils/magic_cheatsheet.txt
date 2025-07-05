@@ -1,0 +1,9 @@
+Magic Cheatsheet
+
+Scroll = Zoom
+CTRL+SCROLL = Scroll Horizontal
+SHIFT+SCROLL = Scroll Vertical
+y = show first DRC error
+7 = paint poly
+n = paint ndiff
+p = paint pdiff

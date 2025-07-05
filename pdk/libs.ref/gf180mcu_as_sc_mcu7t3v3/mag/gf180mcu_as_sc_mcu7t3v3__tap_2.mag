@@ -1,0 +1,44 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 1751532504
+<< nwell >>
+rect -86 354 310 870
+<< pwell >>
+rect -86 -86 310 354
+<< psubdiff >>
+rect 71 299 147 312
+rect 71 70 86 299
+rect 132 70 147 299
+rect 71 57 147 70
+<< nsubdiff >>
+rect 70 700 148 713
+rect 70 397 86 700
+rect 132 397 148 700
+rect 70 384 148 397
+<< psubdiffcont >>
+rect 86 70 132 299
+<< nsubdiffcont >>
+rect 86 397 132 700
+<< metal1 >>
+rect 0 724 224 844
+rect 75 700 143 724
+rect 75 397 86 700
+rect 132 397 143 700
+rect 75 386 143 397
+rect 75 299 143 302
+rect 75 70 86 299
+rect 132 70 143 299
+rect 75 60 143 70
+rect 0 -60 224 60
+<< labels >>
+flabel metal1 s 0 724 224 844 0 FreeSans 400 0 0 0 VDD
+port 1 nsew power bidirectional abutment
+flabel metal1 s 0 -60 224 60 0 FreeSans 400 0 0 0 VSS
+port 4 nsew ground bidirectional abutment
+<< properties >>
+string FIXED_BBOX 0 0 224 784
+string LEFclass CORE WELLTAP
+string LEFsite unithd
+string LEFsymmetry X Y
+<< end >>

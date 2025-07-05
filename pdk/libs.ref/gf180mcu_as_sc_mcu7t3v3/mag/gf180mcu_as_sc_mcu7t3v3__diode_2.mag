@@ -1,0 +1,47 @@
+magic
+tech gf180mcuD
+magscale 1 10
+timestamp 1751532392
+<< nwell >>
+rect -86 354 310 870
+<< pwell >>
+rect -86 -86 310 354
+<< pdiode >>
+rect 60 536 145 580
+rect 60 490 80 536
+rect 126 490 145 536
+rect 60 472 145 490
+<< ndiode >>
+rect 56 219 144 232
+rect 56 173 80 219
+rect 126 173 144 219
+rect 56 137 144 173
+<< pdiodec >>
+rect 80 490 126 536
+<< ndiodec >>
+rect 80 173 126 219
+<< metal1 >>
+rect 0 724 224 844
+rect 66 536 126 550
+rect 66 490 80 536
+rect 66 219 126 490
+rect 66 173 80 219
+rect 66 161 126 173
+rect 0 -60 224 60
+<< labels >>
+flabel metal1 s 0 724 224 844 0 FreeSans 400 0 0 0 VDD
+port 1 nsew power bidirectional abutment
+flabel metal1 s 0 -60 224 60 0 FreeSans 400 0 0 0 VSS
+port 4 nsew ground bidirectional abutment
+flabel nwell s 10 734 110 834 0 FreeSans 400 0 0 0 VNW
+port 2 nsew power bidirectional
+flabel pwell s 10 -50 110 50 0 FreeSans 400 0 0 0 VPW
+port 3 nsew ground bidirectional
+flabel metal1 66 161 126 550 0 FreeSans 200 0 0 0 DIODE
+port 5 nsew signal input
+<< properties >>
+string FIXED_BBOX 0 0 224 784
+string LEFclass CORE ANTENNACELL
+string LEFsite unithd
+string LEFsymmetry X Y
+<< end >>

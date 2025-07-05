@@ -1,0 +1,31 @@
+.option method=key
+
+.param
++  sw_stat_global = 0
++  sw_stat_mismatch = 0
++ mc_skew = 3
++ res_mc_skew = 3
++ cap_mc_skew = 3
++  fnoicor = 0
+
+.lib /foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
+.option wnflag=1
+
+.include ./gf180mcu_fd_sc_mcu7t5v0__nand2_2.spice
+
+VDD VDD 0 5V
+VSS VSS 0 0V
+
+R111 VNW VSS 10
+R112 VPW VDD 10
+
+Va A1 VSS PULSE( 0 5 0 0.1ns 0.1ns 5ns 10ns )
+Vb A2 VSS PULSE( 0 5 0 0.1ns 0.1ns 10ns 20ns )
+
+.tran 1n 50n
+
+.control
+run
+plot v(ZN)
+.endc
+.end

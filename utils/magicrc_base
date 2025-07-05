@@ -1,0 +1,15 @@
+# Source the PDK magicrc file
+source $env(PDK_ROOT)/$env(PDK)/libs.tech/magic/$env(PDK).magicrc
+macro = "drc find; findbox zoom; zoom 16"
+macro Control_XK_Pointer_Button4 "scroll l .05 w"
+macro Control_XK_Pointer_Button5 "scroll r .05 w"
+macro Shift_XK_Pointer_Button4 "scroll u .05 w"
+macro Shift_XK_Pointer_Button5 "scroll d .05 w"
+macro Button4 "zoom 0.70711"
+macro Button5 "zoom 1.41421"
+macro y "drc check; drc why"
+macro n "paint ndiff"
+macro p "paint pdiff"
+macro 7 "paint poly"
+macro P "erase pdiff"
+macro N "erase ndiff"

@@ -1,0 +1,429 @@
+library(gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
+	delay_model : "table_lookup";
+	
+	technology ("cmos");
+	
+	capacitive_load_unit (1.0, "pf");
+	current_unit : "1mA";
+	leakage_power_unit : "1nW";
+	time_unit : "1ns";
+	voltage_unit : "1V";
+	pulling_resistance_unit : "1ohm";
+	
+	operating_conditions("tt_025C_3v30") {
+		process : 1.0;
+		temperature : 25.0;
+		voltage : 3.3;
+		tree_type : "balanced_tree";
+		process_corner : "Typical";
+	}
+	default_operating_conditions : "tt_025C_3v30";
+	nom_process : 1.0;
+	nom_temperature : 25.0;
+	nom_voltage : 3.3;
+	
+	voltage_map (VNW, 3.3);
+	voltage_map (VDD, 3.3);
+	voltage_map (VSS, 0);
+	voltage_map (VPW, 0);
+	
+	input_threshold_pct_fall : 50.0;
+	input_threshold_pct_rise : 50.0;
+	output_threshold_pct_fall : 50.0;
+	output_threshold_pct_rise : 50.0;
+	slew_derate_from_library : 0.5;
+	slew_lower_threshold_pct_fall : 30.0;
+	slew_lower_threshold_pct_rise : 30.0;
+	slew_upper_threshold_pct_fall : 70.0;
+	slew_upper_threshold_pct_rise : 70.0;
+	
+	default_arc_mode : "worst_edges";
+	default_constraint_arc_mode : "worst";
+	default_inout_pin_cap : 0;
+	default_input_pin_cap : 0;
+	default_output_pin_cap : 0;
+	
+	in_place_swap_mode : "match_footprint";
+	
+	lu_table_template (hold_template_3x7) {
+		variable_1 : related_pin_transition;
+		variable_2 : constrained_pin_transition;
+		index_1 ("1, 2, 3");
+		index_2 ("1, 2, 3, 4, 5, 6, 7");
+	}
+
+	lu_table_template (setup_template_3x7) {
+		variable_1 : related_pin_transition;
+		variable_2 : constrained_pin_transition;
+		index_1 ("1, 2, 3");
+		index_2 ("1, 2, 3, 4, 5, 6, 7");
+	}
+
+	lu_table_template (delay_template_7x7) {
+		variable_1 : total_output_net_capacitance;
+		variable_2 : input_net_transition;
+		index_1 ("1, 2, 3, 4, 5, 6, 7");
+		index_2 ("1, 2, 3, 4, 5, 6, 7");
+	}
+
+	power_lut_template ("energy_template_7x7") {
+		variable_1 : total_output_net_capacitance;
+		variable_2 : input_transition_time;
+		index_1 ("1, 2, 3, 4, 5, 6, 7");
+		index_2 ("1, 2, 3, 4, 5, 6, 7");
+	}
+
+	cell (gf180mcu_as_sc_mcu7t3v3__inv_2) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__inv;
+		area : 6.585600;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 2;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(!A)"
+			max_transition : 2;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__tiel_4) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__tiel;
+		area: 8.780800;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(ZERO) {
+			direction : output;
+			function : "0";
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__tieh_4) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__tieh;
+		area: 8.780800;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(ONE) {
+			direction : output;
+			function : "1";
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__diode_2) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__diode;
+		area: 4.390400;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(DIODE) {
+			direction : input;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__fill_1) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__fill;
+		area: 2.195200;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__fill_2) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__fill;
+		area: 4.390400;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__fill_4) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__fill;
+		area: 8.780800;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__fill_8) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__fill;
+		area: 17.561600;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__decap_4) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__decap;
+		area: 8.780800;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__decap_8) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__decap;
+		area: 17.561600;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__decap_16) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__decap;
+		area: 35.123200;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+	}
+}
