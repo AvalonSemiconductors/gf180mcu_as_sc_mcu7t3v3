@@ -1489,6 +1489,103 @@ VERSION 5.7 ;
   NOWIREEXTENSIONATPIN ON ;
   DIVIDERCHAR "/" ;
   BUSBITCHARS "[]" ;
+MACRO gf180mcu_as_sc_mcu7t3v3__nand2_4
+  CLASS CORE ;
+  FOREIGN gf180mcu_as_sc_mcu7t3v3__nand2_4 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 7.280 BY 3.920 ;
+  SYMMETRY X Y ;
+  SITE unithd ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.620 7.280 4.220 ;
+        RECT 0.205 2.235 0.435 3.620 ;
+        RECT 1.805 3.230 2.035 3.620 ;
+        RECT 3.405 3.230 3.635 3.620 ;
+        RECT 5.005 3.230 5.235 3.620 ;
+        RECT 6.605 2.135 6.835 3.620 ;
+    END
+  END VDD
+  PIN VNW
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Nwell ;
+        RECT -0.415 1.770 7.725 4.350 ;
+    END
+  END VNW
+  PIN VPW
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Pwell ;
+        RECT -0.430 -0.430 7.710 1.770 ;
+    END
+  END VPW
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 1.005 0.300 1.235 0.690 ;
+        RECT 2.605 0.300 2.835 0.690 ;
+        RECT 0.000 -0.300 7.280 0.300 ;
+    END
+  END VSS
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 3.910400 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 5.805 2.710 6.035 3.390 ;
+        RECT 0.820 2.480 6.035 2.710 ;
+        RECT 5.805 2.265 6.035 2.480 ;
+        RECT 5.805 1.245 6.165 2.265 ;
+        RECT 4.085 1.015 6.165 1.245 ;
+    END
+  END Y
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 2.665600 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.580 1.600 3.145 2.055 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 2.665600 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 3.895 1.595 5.540 2.050 ;
+    END
+  END B
+  OBS
+      LAYER Metal1 ;
+        RECT 0.205 1.245 0.435 1.315 ;
+        RECT 1.805 1.245 2.035 1.315 ;
+        RECT 3.405 1.245 3.635 1.315 ;
+        RECT 0.205 1.015 3.635 1.245 ;
+        RECT 0.205 0.950 0.435 1.015 ;
+        RECT 1.805 0.950 2.035 1.015 ;
+        RECT 3.405 0.760 3.635 1.015 ;
+        RECT 3.405 0.530 6.890 0.760 ;
+  END
+END gf180mcu_as_sc_mcu7t3v3__nand2_4
+
+
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
 MACRO gf180mcu_as_sc_mcu7t3v3__nor2_2
   CLASS CORE ;
   FOREIGN gf180mcu_as_sc_mcu7t3v3__nor2_2 ;
