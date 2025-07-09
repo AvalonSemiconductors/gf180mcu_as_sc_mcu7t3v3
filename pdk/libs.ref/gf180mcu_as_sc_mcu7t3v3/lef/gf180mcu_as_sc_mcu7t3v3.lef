@@ -2,6 +2,192 @@ VERSION 5.7 ;
   NOWIREEXTENSIONATPIN ON ;
   DIVIDERCHAR "/" ;
   BUSBITCHARS "[]" ;
+MACRO gf180mcu_as_sc_mcu7t3v3__and2_2
+  CLASS CORE ;
+  FOREIGN gf180mcu_as_sc_mcu7t3v3__and2_2 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 3.920 BY 3.920 ;
+  SYMMETRY X Y ;
+  SITE unithd ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.620 3.920 4.220 ;
+        RECT 0.205 3.230 0.435 3.620 ;
+        RECT 1.805 3.230 2.035 3.620 ;
+        RECT 3.405 2.150 3.635 3.620 ;
+    END
+  END VDD
+  PIN VNW
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Nwell ;
+        RECT -0.430 1.770 4.350 4.350 ;
+    END
+  END VNW
+  PIN VPW
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Pwell ;
+        RECT -0.430 -0.430 4.350 1.770 ;
+    END
+  END VPW
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 1.805 0.300 2.035 0.690 ;
+        RECT 3.405 0.300 3.635 1.450 ;
+        RECT 0.000 -0.300 3.920 0.300 ;
+    END
+  END VSS
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.666400 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 1.255 1.555 1.660 2.540 ;
+    END
+  END B
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.666400 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.205 1.560 0.860 1.985 ;
+    END
+  END A
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 1.237600 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 2.605 0.920 3.035 3.390 ;
+    END
+  END Y
+  OBS
+      LAYER Metal1 ;
+        RECT 0.950 2.770 2.120 3.000 ;
+        RECT 1.890 1.980 2.120 2.770 ;
+        RECT 1.890 1.555 2.195 1.980 ;
+        RECT 0.205 1.150 0.435 1.240 ;
+        RECT 1.890 1.150 2.120 1.555 ;
+        RECT 0.205 0.920 2.120 1.150 ;
+        RECT 0.205 0.860 0.435 0.920 ;
+  END
+END gf180mcu_as_sc_mcu7t3v3__and2_2
+
+
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO gf180mcu_as_sc_mcu7t3v3__and2_4
+  CLASS CORE ;
+  FOREIGN gf180mcu_as_sc_mcu7t3v3__and2_4 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 5.600 BY 3.920 ;
+  SYMMETRY X Y ;
+  SITE unithd ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.620 5.600 4.220 ;
+        RECT 0.205 3.230 0.435 3.620 ;
+        RECT 1.805 3.230 2.035 3.620 ;
+        RECT 3.405 2.150 3.635 3.620 ;
+        RECT 5.005 2.150 5.235 3.620 ;
+    END
+  END VDD
+  PIN VNW
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Nwell ;
+        RECT -0.430 1.770 6.030 4.350 ;
+    END
+  END VNW
+  PIN VPW
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Pwell ;
+        RECT -0.430 -0.430 6.030 1.770 ;
+    END
+  END VPW
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 1.805 0.300 2.035 0.690 ;
+        RECT 3.405 0.300 3.635 1.450 ;
+        RECT 5.005 0.300 5.235 1.450 ;
+        RECT 0.000 -0.300 5.600 0.300 ;
+    END
+  END VSS
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.666400 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 1.255 1.555 1.660 2.540 ;
+    END
+  END B
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.666400 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.205 1.560 0.860 1.985 ;
+    END
+  END A
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 2.475200 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 2.605 1.920 2.835 3.390 ;
+        RECT 4.205 1.920 4.600 3.390 ;
+        RECT 2.605 1.690 4.600 1.920 ;
+        RECT 2.605 0.920 2.835 1.690 ;
+        RECT 4.205 0.920 4.600 1.690 ;
+    END
+  END Y
+  OBS
+      LAYER Metal1 ;
+        RECT 0.950 2.770 2.120 3.000 ;
+        RECT 1.890 1.980 2.120 2.770 ;
+        RECT 1.890 1.555 2.195 1.980 ;
+        RECT 0.205 1.150 0.435 1.240 ;
+        RECT 1.890 1.150 2.120 1.555 ;
+        RECT 0.205 0.920 2.120 1.150 ;
+        RECT 0.205 0.860 0.435 0.920 ;
+  END
+END gf180mcu_as_sc_mcu7t3v3__and2_4
+
+
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
 MACRO gf180mcu_as_sc_mcu7t3v3__buff_12
   CLASS CORE ;
   FOREIGN gf180mcu_as_sc_mcu7t3v3__buff_12 ;
@@ -1397,6 +1583,316 @@ VERSION 5.7 ;
   NOWIREEXTENSIONATPIN ON ;
   DIVIDERCHAR "/" ;
   BUSBITCHARS "[]" ;
+MACRO gf180mcu_as_sc_mcu7t3v3__inv_6
+  CLASS CORE ;
+  FOREIGN gf180mcu_as_sc_mcu7t3v3__inv_6 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 5.600 BY 3.920 ;
+  SYMMETRY X Y ;
+  SITE unithd ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.620 5.600 4.220 ;
+        RECT 0.205 2.355 0.435 3.620 ;
+        RECT 1.805 2.295 2.035 3.620 ;
+        RECT 3.405 2.175 3.635 3.620 ;
+        RECT 5.005 2.175 5.235 3.620 ;
+    END
+  END VDD
+  PIN VNW
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Nwell ;
+        RECT -0.430 1.770 6.030 4.350 ;
+    END
+  END VNW
+  PIN VPW
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Pwell ;
+        RECT -0.430 -0.430 6.030 1.770 ;
+    END
+  END VPW
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.205 0.300 0.435 1.235 ;
+        RECT 1.805 0.300 2.035 1.235 ;
+        RECT 3.405 0.300 3.635 1.395 ;
+        RECT 5.005 0.300 5.235 1.395 ;
+        RECT 0.000 -0.300 5.600 0.300 ;
+    END
+  END VSS
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 3.712800 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 1.005 2.255 1.235 3.385 ;
+        RECT 1.005 1.935 1.350 2.255 ;
+        RECT 2.605 1.935 2.835 3.385 ;
+        RECT 4.205 1.935 4.570 3.385 ;
+        RECT 1.005 1.705 4.570 1.935 ;
+        RECT 1.005 1.260 1.350 1.705 ;
+        RECT 1.005 0.990 1.235 1.260 ;
+        RECT 2.605 0.990 2.835 1.705 ;
+        RECT 4.205 0.990 4.570 1.705 ;
+    END
+  END Y
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 3.998400 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.205 1.590 0.775 2.125 ;
+    END
+  END A
+END gf180mcu_as_sc_mcu7t3v3__inv_6
+
+
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO gf180mcu_as_sc_mcu7t3v3__mux2_2
+  CLASS CORE ;
+  FOREIGN gf180mcu_as_sc_mcu7t3v3__mux2_2 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 6.720 BY 3.920 ;
+  SYMMETRY X Y ;
+  SITE unithd ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.620 6.720 4.220 ;
+        RECT 1.005 3.230 1.235 3.620 ;
+        RECT 4.425 3.230 4.655 3.620 ;
+        RECT 6.045 2.165 6.275 3.620 ;
+    END
+  END VDD
+  PIN VNW
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Nwell ;
+        RECT -0.430 1.770 7.150 4.350 ;
+    END
+  END VNW
+  PIN VPW
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Pwell ;
+        RECT -0.430 -0.430 7.150 1.770 ;
+    END
+  END VPW
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 1.005 0.300 1.235 0.690 ;
+        RECT 4.425 0.300 4.655 0.690 ;
+        RECT 6.045 0.300 6.275 1.415 ;
+        RECT 0.000 -0.300 6.720 0.300 ;
+    END
+  END VSS
+  PIN S
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 1.332800 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.665 1.570 1.000 2.240 ;
+        RECT 0.705 1.225 0.935 1.570 ;
+        RECT 2.105 1.225 2.335 1.940 ;
+        RECT 3.360 1.570 3.720 2.540 ;
+        RECT 3.425 1.225 3.655 1.570 ;
+        RECT 0.705 0.995 3.655 1.225 ;
+    END
+  END S
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.666400 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 1.465 1.570 1.800 2.540 ;
+    END
+  END B
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.666400 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 3.960 1.570 4.320 2.540 ;
+    END
+  END A
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 1.285200 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 5.245 0.990 5.575 3.390 ;
+    END
+  END Y
+  OBS
+      LAYER Metal1 ;
+        RECT 0.205 3.000 0.435 3.390 ;
+        RECT 2.720 3.160 3.775 3.390 ;
+        RECT 3.545 3.000 3.775 3.160 ;
+        RECT 0.205 2.770 2.485 3.000 ;
+        RECT 3.545 2.770 5.015 3.000 ;
+        RECT 0.205 0.990 0.435 2.770 ;
+        RECT 2.255 2.550 2.485 2.770 ;
+        RECT 2.255 2.320 2.940 2.550 ;
+        RECT 2.710 1.570 2.940 2.320 ;
+        RECT 4.785 1.150 5.015 2.770 ;
+        RECT 3.965 0.920 5.015 1.150 ;
+        RECT 3.965 0.760 4.195 0.920 ;
+        RECT 2.205 0.530 4.195 0.760 ;
+  END
+END gf180mcu_as_sc_mcu7t3v3__mux2_2
+
+
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO gf180mcu_as_sc_mcu7t3v3__mux2_4
+  CLASS CORE ;
+  FOREIGN gf180mcu_as_sc_mcu7t3v3__mux2_4 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 8.400 BY 3.920 ;
+  SYMMETRY X Y ;
+  SITE unithd ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.620 8.400 4.220 ;
+        RECT 1.005 3.230 1.235 3.620 ;
+        RECT 4.425 3.230 4.655 3.620 ;
+        RECT 6.045 2.165 6.275 3.620 ;
+        RECT 7.645 2.165 7.875 3.620 ;
+    END
+  END VDD
+  PIN VNW
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Nwell ;
+        RECT -0.430 1.770 8.830 4.350 ;
+    END
+  END VNW
+  PIN VPW
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Pwell ;
+        RECT -0.430 -0.430 8.830 1.770 ;
+    END
+  END VPW
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 1.005 0.300 1.235 0.690 ;
+        RECT 4.425 0.300 4.655 0.690 ;
+        RECT 6.045 0.300 6.275 1.415 ;
+        RECT 7.645 0.300 7.875 1.415 ;
+        RECT 0.000 -0.300 8.400 0.300 ;
+    END
+  END VSS
+  PIN S
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 1.332800 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.665 1.570 1.000 2.240 ;
+        RECT 0.705 1.225 0.935 1.570 ;
+        RECT 2.105 1.225 2.335 1.940 ;
+        RECT 3.360 1.570 3.720 2.540 ;
+        RECT 3.425 1.225 3.655 1.570 ;
+        RECT 0.705 0.995 3.655 1.225 ;
+    END
+  END S
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.666400 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 1.465 1.570 1.800 2.540 ;
+    END
+  END B
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.666400 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 3.960 1.570 4.320 2.540 ;
+    END
+  END A
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 2.522800 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 5.245 1.890 5.575 3.390 ;
+        RECT 6.845 1.890 7.175 3.390 ;
+        RECT 5.245 1.660 7.175 1.890 ;
+        RECT 5.245 0.990 5.575 1.660 ;
+        RECT 6.845 0.990 7.175 1.660 ;
+    END
+  END Y
+  OBS
+      LAYER Metal1 ;
+        RECT 0.205 3.000 0.435 3.390 ;
+        RECT 2.720 3.160 3.775 3.390 ;
+        RECT 3.545 3.000 3.775 3.160 ;
+        RECT 0.205 2.770 2.485 3.000 ;
+        RECT 3.545 2.770 5.015 3.000 ;
+        RECT 0.205 0.990 0.435 2.770 ;
+        RECT 2.255 2.550 2.485 2.770 ;
+        RECT 2.255 2.320 2.940 2.550 ;
+        RECT 2.710 1.570 2.940 2.320 ;
+        RECT 4.785 1.150 5.015 2.770 ;
+        RECT 3.965 0.920 5.015 1.150 ;
+        RECT 3.965 0.760 4.195 0.920 ;
+        RECT 2.205 0.530 4.195 0.760 ;
+  END
+END gf180mcu_as_sc_mcu7t3v3__mux2_4
+
+
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
 MACRO gf180mcu_as_sc_mcu7t3v3__nand2_2
   CLASS CORE ;
   FOREIGN gf180mcu_as_sc_mcu7t3v3__nand2_2 ;
@@ -1586,6 +2082,209 @@ VERSION 5.7 ;
   NOWIREEXTENSIONATPIN ON ;
   DIVIDERCHAR "/" ;
   BUSBITCHARS "[]" ;
+MACRO gf180mcu_as_sc_mcu7t3v3__nand2b_2
+  CLASS CORE ;
+  FOREIGN gf180mcu_as_sc_mcu7t3v3__nand2b_2 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 5.600 BY 3.920 ;
+  SYMMETRY X Y ;
+  SITE unithd ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.620 5.600 4.220 ;
+        RECT 0.445 2.360 0.675 3.620 ;
+        RECT 1.885 2.360 2.115 3.620 ;
+        RECT 3.485 3.230 3.715 3.620 ;
+        RECT 5.090 3.230 5.320 3.620 ;
+    END
+  END VDD
+  PIN VNW
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Nwell ;
+        RECT -0.430 1.770 6.030 4.350 ;
+    END
+  END VNW
+  PIN VPW
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Pwell ;
+        RECT -0.430 -0.430 6.030 1.770 ;
+    END
+  END VPW
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.445 0.300 0.675 1.365 ;
+        RECT 2.685 0.300 2.915 0.690 ;
+        RECT 0.000 -0.300 5.600 0.300 ;
+    END
+  END VSS
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 1.955200 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 2.685 3.000 2.915 3.160 ;
+        RECT 4.285 3.000 4.515 3.160 ;
+        RECT 2.685 2.770 5.315 3.000 ;
+        RECT 4.285 1.320 4.515 1.330 ;
+        RECT 4.845 1.320 5.315 2.770 ;
+        RECT 4.285 1.050 5.315 1.320 ;
+        RECT 4.285 0.990 4.515 1.050 ;
+    END
+  END Y
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 1.332800 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 3.810 1.610 4.615 2.015 ;
+    END
+  END B
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.666400 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.310 1.595 1.010 1.945 ;
+    END
+  END A
+  OBS
+      LAYER Metal1 ;
+        RECT 1.245 1.915 1.475 3.390 ;
+        RECT 2.180 1.915 2.480 2.020 ;
+        RECT 1.245 1.685 2.480 1.915 ;
+        RECT 1.245 0.990 1.475 1.685 ;
+        RECT 2.180 1.615 2.480 1.685 ;
+        RECT 1.885 0.920 3.715 1.150 ;
+        RECT 1.885 0.805 2.115 0.920 ;
+        RECT 3.485 0.760 3.715 0.920 ;
+        RECT 3.485 0.530 5.370 0.760 ;
+  END
+END gf180mcu_as_sc_mcu7t3v3__nand2b_2
+
+
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO gf180mcu_as_sc_mcu7t3v3__nand2b_4
+  CLASS CORE ;
+  FOREIGN gf180mcu_as_sc_mcu7t3v3__nand2b_4 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 8.960 BY 3.920 ;
+  SYMMETRY X Y ;
+  SITE unithd ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.620 8.960 4.220 ;
+        RECT 0.445 2.180 0.675 3.620 ;
+        RECT 1.885 2.235 2.115 3.620 ;
+        RECT 3.485 3.230 3.715 3.620 ;
+        RECT 5.085 3.230 5.315 3.620 ;
+        RECT 6.685 3.230 6.915 3.620 ;
+        RECT 8.285 2.135 8.515 3.620 ;
+    END
+  END VDD
+  PIN VNW
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Nwell ;
+        RECT -0.415 1.770 9.405 4.350 ;
+    END
+  END VNW
+  PIN VPW
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Pwell ;
+        RECT -0.430 -0.430 9.390 1.770 ;
+    END
+  END VPW
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.445 0.300 0.675 1.350 ;
+        RECT 2.685 0.300 2.915 0.690 ;
+        RECT 4.285 0.300 4.515 0.690 ;
+        RECT 0.000 -0.300 8.960 0.300 ;
+    END
+  END VSS
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 3.910400 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 7.485 2.710 7.715 3.390 ;
+        RECT 2.500 2.480 7.715 2.710 ;
+        RECT 7.485 2.265 7.715 2.480 ;
+        RECT 7.485 1.245 7.845 2.265 ;
+        RECT 5.765 1.015 7.845 1.245 ;
+    END
+  END Y
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.666400 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.370 1.580 1.015 1.950 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 2.665600 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 5.575 1.595 7.220 2.050 ;
+    END
+  END B
+  OBS
+      LAYER Metal1 ;
+        RECT 1.245 1.880 1.475 3.390 ;
+        RECT 2.260 1.880 2.555 1.930 ;
+        RECT 1.245 1.650 2.555 1.880 ;
+        RECT 1.245 0.975 1.475 1.650 ;
+        RECT 2.260 1.590 2.555 1.650 ;
+        RECT 1.885 1.245 2.115 1.315 ;
+        RECT 3.485 1.245 3.715 1.315 ;
+        RECT 5.085 1.245 5.315 1.315 ;
+        RECT 1.885 1.015 5.315 1.245 ;
+        RECT 1.885 0.950 2.115 1.015 ;
+        RECT 3.485 0.950 3.715 1.015 ;
+        RECT 5.085 0.760 5.315 1.015 ;
+        RECT 5.085 0.530 8.570 0.760 ;
+  END
+END gf180mcu_as_sc_mcu7t3v3__nand2b_4
+
+
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
 MACRO gf180mcu_as_sc_mcu7t3v3__nor2_2
   CLASS CORE ;
   FOREIGN gf180mcu_as_sc_mcu7t3v3__nor2_2 ;
@@ -1673,6 +2372,482 @@ MACRO gf180mcu_as_sc_mcu7t3v3__nor2_2
         RECT 0.205 2.695 1.980 2.925 ;
   END
 END gf180mcu_as_sc_mcu7t3v3__nor2_2
+
+
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO gf180mcu_as_sc_mcu7t3v3__nor2_4
+  CLASS CORE ;
+  FOREIGN gf180mcu_as_sc_mcu7t3v3__nor2_4 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 7.280 BY 3.920 ;
+  SYMMETRY X Y ;
+  SITE unithd ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.620 7.280 4.220 ;
+        RECT 1.005 3.230 1.235 3.620 ;
+        RECT 2.605 3.230 2.835 3.620 ;
+    END
+  END VDD
+  PIN VNW
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Nwell ;
+        RECT -0.430 1.770 7.710 4.350 ;
+    END
+  END VNW
+  PIN VPW
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Pwell ;
+        RECT -0.430 -0.430 7.710 1.770 ;
+    END
+  END VPW
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.205 0.300 0.435 1.370 ;
+        RECT 1.805 0.300 2.035 0.690 ;
+        RECT 3.405 0.300 3.635 0.690 ;
+        RECT 5.005 0.300 5.235 0.690 ;
+        RECT 6.605 0.300 6.835 1.370 ;
+        RECT 0.000 -0.300 7.280 0.300 ;
+    END
+  END VSS
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 3.515200 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 5.705 2.750 6.135 2.765 ;
+        RECT 3.975 2.520 6.135 2.750 ;
+        RECT 5.705 1.210 6.135 2.520 ;
+        RECT 0.730 0.980 6.135 1.210 ;
+    END
+  END Y
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 2.665600 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.580 1.565 3.260 1.995 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 2.665600 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 3.855 1.565 5.475 1.985 ;
+    END
+  END B
+  OBS
+      LAYER Metal1 ;
+        RECT 0.205 2.630 0.435 3.390 ;
+        RECT 3.405 3.160 6.890 3.390 ;
+        RECT 3.405 2.630 3.635 3.160 ;
+        RECT 0.205 2.400 3.690 2.630 ;
+        RECT 0.205 2.320 0.435 2.400 ;
+  END
+END gf180mcu_as_sc_mcu7t3v3__nor2_4
+
+
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO gf180mcu_as_sc_mcu7t3v3__nor2b_2
+  CLASS CORE ;
+  FOREIGN gf180mcu_as_sc_mcu7t3v3__nor2b_2 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 5.600 BY 3.920 ;
+  SYMMETRY X Y ;
+  SITE unithd ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.620 5.600 4.220 ;
+        RECT 0.445 2.595 0.675 3.620 ;
+        RECT 2.685 3.230 2.915 3.620 ;
+    END
+  END VDD
+  PIN VNW
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Nwell ;
+        RECT -0.430 1.770 6.030 4.350 ;
+    END
+  END VNW
+  PIN VPW
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Pwell ;
+        RECT -0.430 -0.430 6.030 1.770 ;
+    END
+  END VPW
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.445 0.300 0.675 1.315 ;
+        RECT 1.885 0.300 2.115 0.690 ;
+        RECT 3.485 0.300 3.715 0.690 ;
+        RECT 5.085 0.300 5.315 0.690 ;
+        RECT 0.000 -0.300 5.600 0.300 ;
+    END
+  END VSS
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 1.757600 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 4.845 2.845 5.315 2.930 ;
+        RECT 4.225 2.615 5.315 2.845 ;
+        RECT 4.845 1.275 5.315 2.615 ;
+        RECT 2.685 1.045 5.315 1.275 ;
+        RECT 2.685 0.935 2.915 1.045 ;
+    END
+  END Y
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 1.332800 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 3.330 1.610 4.615 2.015 ;
+    END
+  END B
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.666400 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.415 1.975 0.775 2.365 ;
+        RECT 0.415 1.545 0.975 1.975 ;
+    END
+  END A
+  OBS
+      LAYER Metal1 ;
+        RECT 1.245 1.935 1.475 3.390 ;
+        RECT 3.430 3.160 5.370 3.390 ;
+        RECT 1.885 2.925 2.115 3.040 ;
+        RECT 3.430 2.925 3.660 3.160 ;
+        RECT 1.885 2.695 3.660 2.925 ;
+        RECT 2.180 1.935 2.500 2.020 ;
+        RECT 1.245 1.705 2.500 1.935 ;
+        RECT 1.245 0.990 1.475 1.705 ;
+        RECT 2.180 1.615 2.500 1.705 ;
+  END
+END gf180mcu_as_sc_mcu7t3v3__nor2b_2
+
+
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO gf180mcu_as_sc_mcu7t3v3__nor2b_4
+  CLASS CORE ;
+  FOREIGN gf180mcu_as_sc_mcu7t3v3__nor2b_4 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 8.960 BY 3.920 ;
+  SYMMETRY X Y ;
+  SITE unithd ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.620 8.960 4.220 ;
+        RECT 0.445 2.615 0.675 3.620 ;
+        RECT 2.685 3.230 2.915 3.620 ;
+        RECT 4.285 3.230 4.515 3.620 ;
+    END
+  END VDD
+  PIN VNW
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Nwell ;
+        RECT -0.430 1.770 9.390 4.350 ;
+    END
+  END VNW
+  PIN VPW
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Pwell ;
+        RECT -0.430 -0.430 9.390 1.770 ;
+    END
+  END VPW
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.445 0.300 0.675 1.310 ;
+        RECT 1.885 0.300 2.115 1.370 ;
+        RECT 3.485 0.300 3.715 0.690 ;
+        RECT 5.085 0.300 5.315 0.690 ;
+        RECT 6.685 0.300 6.915 0.690 ;
+        RECT 8.285 0.300 8.515 1.370 ;
+        RECT 0.000 -0.300 8.960 0.300 ;
+    END
+  END VSS
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 3.515200 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 7.385 2.750 7.815 2.930 ;
+        RECT 5.655 2.520 7.815 2.750 ;
+        RECT 7.385 1.210 7.815 2.520 ;
+        RECT 2.410 0.980 7.815 1.210 ;
+    END
+  END Y
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.666400 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.410 1.955 0.755 2.385 ;
+        RECT 0.410 1.545 0.970 1.955 ;
+    END
+  END A
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 2.665600 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 5.535 1.565 7.155 1.985 ;
+    END
+  END B
+  OBS
+      LAYER Metal1 ;
+        RECT 1.245 1.895 1.475 3.390 ;
+        RECT 1.885 2.630 2.115 3.390 ;
+        RECT 5.085 3.160 8.570 3.390 ;
+        RECT 5.085 2.630 5.315 3.160 ;
+        RECT 1.885 2.400 5.370 2.630 ;
+        RECT 1.885 2.320 2.115 2.400 ;
+        RECT 2.225 1.895 2.550 1.955 ;
+        RECT 1.245 1.665 2.550 1.895 ;
+        RECT 1.245 0.990 1.475 1.665 ;
+        RECT 2.225 1.610 2.550 1.665 ;
+  END
+END gf180mcu_as_sc_mcu7t3v3__nor2b_4
+
+
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO gf180mcu_as_sc_mcu7t3v3__or2_2
+  CLASS CORE ;
+  FOREIGN gf180mcu_as_sc_mcu7t3v3__or2_2 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 3.920 BY 3.920 ;
+  SYMMETRY X Y ;
+  SITE unithd ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.620 3.920 4.220 ;
+        RECT 1.805 3.230 2.035 3.620 ;
+        RECT 3.405 2.150 3.635 3.620 ;
+    END
+  END VDD
+  PIN VNW
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Nwell ;
+        RECT -0.430 1.770 4.350 4.350 ;
+    END
+  END VNW
+  PIN VPW
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Pwell ;
+        RECT -0.430 -0.430 4.350 1.770 ;
+    END
+  END VPW
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.205 0.300 0.435 0.690 ;
+        RECT 1.805 0.300 2.035 0.690 ;
+        RECT 3.405 0.300 3.635 1.450 ;
+        RECT 0.000 -0.300 3.920 0.300 ;
+    END
+  END VSS
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.666400 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 1.255 1.555 1.660 2.540 ;
+    END
+  END B
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.666400 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.205 1.560 0.860 1.985 ;
+    END
+  END A
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 1.237600 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 2.605 0.920 3.035 3.390 ;
+    END
+  END Y
+  OBS
+      LAYER Metal1 ;
+        RECT 0.205 2.770 2.120 3.000 ;
+        RECT 0.205 2.640 0.435 2.770 ;
+        RECT 1.890 1.980 2.120 2.770 ;
+        RECT 1.890 1.555 2.195 1.980 ;
+        RECT 1.890 1.150 2.120 1.555 ;
+        RECT 0.940 0.920 2.120 1.150 ;
+  END
+END gf180mcu_as_sc_mcu7t3v3__or2_2
+
+
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO gf180mcu_as_sc_mcu7t3v3__or2_4
+  CLASS CORE ;
+  FOREIGN gf180mcu_as_sc_mcu7t3v3__or2_4 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 5.600 BY 3.920 ;
+  SYMMETRY X Y ;
+  SITE unithd ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.620 5.600 4.220 ;
+        RECT 1.805 3.230 2.035 3.620 ;
+        RECT 3.405 2.150 3.635 3.620 ;
+        RECT 5.005 2.150 5.235 3.620 ;
+    END
+  END VDD
+  PIN VNW
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Nwell ;
+        RECT -0.430 1.770 6.030 4.350 ;
+    END
+  END VNW
+  PIN VPW
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Pwell ;
+        RECT -0.430 -0.430 6.030 1.770 ;
+    END
+  END VPW
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.205 0.300 0.435 0.690 ;
+        RECT 1.805 0.300 2.035 0.690 ;
+        RECT 3.405 0.300 3.635 1.425 ;
+        RECT 5.005 0.300 5.235 1.425 ;
+        RECT 0.000 -0.300 5.600 0.300 ;
+    END
+  END VSS
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.666400 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 1.255 1.555 1.660 2.540 ;
+    END
+  END B
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.666400 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.205 1.560 0.860 1.985 ;
+    END
+  END A
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 2.475200 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 2.605 1.885 2.835 3.390 ;
+        RECT 4.205 1.885 4.600 3.390 ;
+        RECT 2.605 1.655 4.600 1.885 ;
+        RECT 2.605 0.920 2.835 1.655 ;
+        RECT 4.205 0.920 4.600 1.655 ;
+    END
+  END Y
+  OBS
+      LAYER Metal1 ;
+        RECT 0.205 2.770 2.120 3.000 ;
+        RECT 0.205 2.640 0.435 2.770 ;
+        RECT 1.890 1.980 2.120 2.770 ;
+        RECT 1.890 1.555 2.195 1.980 ;
+        RECT 1.890 1.150 2.120 1.555 ;
+        RECT 0.940 0.920 2.120 1.150 ;
+  END
+END gf180mcu_as_sc_mcu7t3v3__or2_4
 
 
 VERSION 5.7 ;
