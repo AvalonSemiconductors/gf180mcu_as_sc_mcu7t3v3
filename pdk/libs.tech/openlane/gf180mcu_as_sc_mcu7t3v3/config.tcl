@@ -1,4 +1,5 @@
 set current_folder [file dirname [file normalize [info script]]]
+# Technology lib
 
 set ::env(LIB_TYPICAL) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30.lib"
 set ::env(LIB_FASTEST) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30.lib"
