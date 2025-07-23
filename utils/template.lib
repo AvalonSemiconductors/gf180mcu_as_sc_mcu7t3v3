@@ -72,7 +72,620 @@ library(gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
 		index_1 ("1, 2, 3, 4, 5, 6, 7");
 		index_2 ("1, 2, 3, 4, 5, 6, 7");
 	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__and2_2) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__and2;
+		area : 15.366400;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
 
+		}
+		
+		pin(B) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(A) & (B)";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+			max_capacitance : 0.629;
+
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__and2_4) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__and2;
+		area : 21.952000;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(B) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(A) & (B)";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+			max_capacitance : 0.629;
+
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__or2_2) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__or2;
+		area : 15.366400;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(B) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(A) | (B)";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+			max_capacitance : 0.629;
+
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__or2_4) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__or2;
+		area : 21.952000;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(B) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(A) | (B)";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+			max_capacitance : 0.629;
+
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__xnor2_2) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__xnor2;
+		area : 30.732800;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(B) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(A&B) | ((!A)&(!B))";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+			max_capacitance : 1.271;
+
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__xnor2_4) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__xnor2;
+		area : 37.318400;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(B) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(A&B) | ((!A)&(!B))";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+			max_capacitance : 1.271;
+
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__dfxtp_2) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__dfxtp;
+		area : 59.270400;
+		
+		ff (IQ, IQN) {
+			clocked_on : "CLK";
+			next_state : "D";
+		}
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin (CLK) {
+			direction : input;
+			clock : "true";
+			related_ground_pin : "VSS";
+			related_power_pin : "VDD";
+			max_transition : 1.0;
+		}
+		
+		pin (D) {
+			direction : input;
+			clock : "false";
+			related_ground_pin : "VSS";
+			related_power_pin : "VDD";
+			max_transition : 1.0;
+			
+		}
+		
+		pin (Q) {
+			direction : output;
+			function : "IQ";
+			related_ground_pin : "VSS";
+			related_power_pin : "VDD";
+			max_transition : 1.5;
+			
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__buff_2) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__buff;
+		area : 13.171200;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(A)";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__clkbuff_8) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__clkbuff;
+		area : 54.880000;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(A)";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+			max_capacitance : 1.27;
+
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__buff_4) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__buff;
+		area : 29.635200;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(A)";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__buff_8) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__buff;
+		area : 59.270400;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(A)";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__buff_12) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__buff;
+		area : 82.320000;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(A)";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+		}
+	}
+	
 	cell (gf180mcu_as_sc_mcu7t3v3__inv_2) {
 		cell_footprint : gf180mcu_as_sc_mcu7t3v3__inv;
 		area : 6.585600;
@@ -103,17 +716,820 @@ library(gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
 		
 		pin(A) {
 			direction : input;
-			max_transition : 2;
+			max_transition : 1.5;
 			related_ground_pin : VSS;
 			related_power_pin : VDD;
 		}
 		
 		pin(Y) {
 			direction : output;
-			function : "(!A)"
-			max_transition : 2;
+			function : "(!A)";
+			max_transition : 1.5;
 			related_ground_pin : VSS;
 			related_power_pin : VDD;
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__inv_4) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__inv;
+		area : 6.585600;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(!A)";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__inv_6) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__inv;
+		area : 21.952000;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(!A)";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+			max_capacitance : 1.275;
+
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__nand2_2) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__buff;
+		area : 23.049600;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+		}
+		
+		pin(B) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(!A) | (!B)";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__nand4_2) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__nand4;
+		area : 24.147200;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(B) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(C) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(D) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(!A) | (!B) | (!C) | (!D)";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+			max_capacitance : 0.617;
+
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__nand2b_2) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__nand2b;
+		area : 21.952000;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(B) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(A) | (!B)";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+			max_capacitance : 0.629;
+
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__nand2b_4) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__nand2b;
+		area : 28.537600;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(B) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(A) | (!B)";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+			max_capacitance : 0.628;
+
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__nor2_4) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__nor2;
+		area : 28.537600;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(B) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(!A) & (!B)";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+			max_capacitance : 0.332;
+
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__nor2b_2) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__nor2b;
+		area : 21.952000;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(B) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(A) & (!B)";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+			max_capacitance : 0.628;
+
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__nor2b_4) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__nor2b;
+		area : 28.537600;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(B) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(A) & (!B)";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+			max_capacitance : 1.25;
+
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__nor3_2) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__nor3;
+		area : 24.147200;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(B) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(C) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(!A) & (!B) & (!C)";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+			max_capacitance : 0.332;
+
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__mux2_2) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__mux2;
+		area : 26.342400;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(B) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(S) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(A&!S) | (B&S)";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+			max_capacitance : 1.271;
+
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__mux2_4) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__mux2;
+		area : 32.928000;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(B) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(S) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(A&!S) | (B&S)";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+			max_capacitance : 1.271;
+
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__maj3_2) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__maj3;
+		area : 26.342400;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(B) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(C) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(A&B) | (A&C) | (B&C) | (A&B&C)";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+			max_capacitance : 0.637;
+
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__maj3_4) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__maj3;
+		area : 32.928000;
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin(A) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(B) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(C) {
+			direction : input;
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+
+		}
+		
+		pin(Y) {
+			direction : output;
+			function : "(A&B) | (A&C) | (B&C) | (A&B&C)";
+			max_transition : 1.5;
+			related_ground_pin : VSS;
+			related_power_pin : VDD;
+			max_capacitance : 0.637;
+
 		}
 	}
 	

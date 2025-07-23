@@ -13,6 +13,8 @@ done
 for filename in temp/*; do
 echo "calma;lef write;" | magic -dnull -noconsole $filename;
 done
+echo "calma;lef write -pinonly;" | magic -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__xnor2_2.mag";
+echo "calma;lef write -pinonly;" | magic -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__xnor2_4.mag";
 rm -rf temp/
 
 rm -rf gds/

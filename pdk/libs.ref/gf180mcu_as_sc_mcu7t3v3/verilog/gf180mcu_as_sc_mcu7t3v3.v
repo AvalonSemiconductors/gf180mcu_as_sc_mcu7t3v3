@@ -386,6 +386,68 @@ assign Y = A | B;
 
 endmodule
 
+module gf180mcu_as_sc_mcu7t3v3__xnor2_2(
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+
+	input A,
+	input B,
+	output Y
+);
+
+assign Y = A == B;
+
+endmodule
+
+module gf180mcu_as_sc_mcu7t3v3__xnor2_4(
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+
+	input A,
+	input B,
+	output Y
+);
+
+assign Y = A == B;
+
+endmodule
+
+module gf180mcu_as_sc_mcu7t3v3__maj3_2(
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+
+	input A,
+	input B,
+	input C,
+	output Y
+);
+
+assign Y = (A & B) | (A & C) | (B & C);
+
+endmodule
+
+module gf180mcu_as_sc_mcu7t3v3__maj3_4(
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+
+	input A,
+	input B,
+	input C,
+	output Y
+);
+
+assign Y = (A & B) | (A & C) | (B & C);
+
+endmodule
+
 module gf180mcu_as_sc_mcu7t3v3__mux2_2(
 	input VPW,
 	input VNW,
