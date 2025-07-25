@@ -1,0 +1,30 @@
+magic
+tech gf180mcuD
+magscale 1 5
+timestamp 1751533312
+<< nwell >>
+rect -43 177 547 435
+<< pwell >>
+rect -43 -43 547 177
+<< ndiff >>
+rect 14 34 490 134
+<< pdiff >>
+rect 14 220 490 358
+<< metal1 >>
+rect 0 362 504 422
+rect 0 -30 504 30
+<< labels >>
+flabel metal1 s 0 362 504 422 0 FreeSans 200 0 0 0 VDD
+port 1 nsew power bidirectional abutment
+flabel metal1 s 0 -30 504 30 0 FreeSans 200 0 0 0 VSS
+port 4 nsew ground bidirectional abutment
+flabel nwell s 5 367 55 417 0 FreeSans 200 0 0 0 VNW
+port 2 nsew power bidirectional
+flabel pwell s 5 -25 55 25 0 FreeSans 200 0 0 0 VPW
+port 3 nsew ground bidirectional
+<< properties >>
+string FIXED_BBOX 0 0 504 392
+string LEFclass CORE
+string LEFsite unithd
+string LEFsymmetry X Y
+<< end >>

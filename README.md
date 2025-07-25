@@ -32,4 +32,6 @@ The klayout XOR check will fail if the GDSII of the standard cells is not linked
 or disable the XOR check:
 `"RUN_KLAYOUT_XOR": 0`
 
+Ensure you are using the latest OpenLane (OPENLANE_TAG=latest), or else you will encounter problems.
+
 From there, the makefile actions to run the OpenLane flow should work as normal.
