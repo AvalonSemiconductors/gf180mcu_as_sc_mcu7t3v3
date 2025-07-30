@@ -480,6 +480,74 @@ assign Y = ~((A & B) | C);
 
 endmodule
 
+module gf180mcu_as_sc_mcu7t3v3__aoi22_2 (
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+
+	input A,
+	input B,
+	input C,
+	input D,
+	output Y
+);
+
+assign Y = ~((A & B) | (C & D));
+
+endmodule
+
+module gf180mcu_as_sc_mcu7t3v3__aoi22_4 (
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+
+	input A,
+	input B,
+	input C,
+	input D,
+	output Y
+);
+
+assign Y = ~((A & B) | (C & D));
+
+endmodule
+
+module gf180mcu_as_sc_mcu7t3v3__ao22_2 (
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+
+	input A,
+	input B,
+	input C,
+	input D,
+	output Y
+);
+
+assign Y = (A & B) | (C & D);
+
+endmodule
+
+module gf180mcu_as_sc_mcu7t3v3__ao22_4 (
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+
+	input A,
+	input B,
+	input C,
+	input D,
+	output Y
+);
+
+assign Y = (A & B) | (C & D);
+
+endmodule
+
 module gf180mcu_as_sc_mcu7t3v3__ao21_2 (
 	input VPW,
 	input VNW,
