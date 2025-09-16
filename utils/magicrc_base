@@ -13,3 +13,4 @@ macro p "paint pdiff"
 macro 7 "paint poly"
 macro P "erase pdiff"
 macro N "erase ndiff"
+snap off
