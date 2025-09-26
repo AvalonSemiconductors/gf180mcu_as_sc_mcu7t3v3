@@ -3797,7 +3797,7 @@ MACRO gf180mcu_as_sc_mcu7t3v3__nand2b_4
     USE POWER ;
     PORT
       LAYER Nwell ;
-        RECT -0.415 1.770 9.405 4.350 ;
+        RECT -0.430 1.770 9.390 4.350 ;
     END
   END VNW
   PIN VPW

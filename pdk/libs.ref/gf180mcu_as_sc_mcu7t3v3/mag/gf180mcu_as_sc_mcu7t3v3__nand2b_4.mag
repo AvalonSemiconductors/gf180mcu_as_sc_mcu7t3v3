@@ -3,7 +3,7 @@ tech gf180mcuD
 magscale 1 10
 timestamp 1752051650
 << nwell >>
-rect -83 354 1881 870
+rect -86 354 1878 870
 << pwell >>
 rect -86 -86 1878 354
 << nmos >>
@@ -271,4 +271,6 @@ string FIXED_BBOX 0 0 1792 784
 string LEFclass CORE
 string LEFsite unithd
 string LEFsymmetry X Y
+string MASKHINTS_NPLUS -86 -86 1878 354
+string MASKHINTS_PPLUS -86 354 1878 870
 << end >>
