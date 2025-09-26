@@ -11,7 +11,7 @@ sed -i '/string GDS_FILE.*/d' $filename;
 done
 
 for filename in temp/*; do
-echo "calma;lef write;" | magic -dnull -noconsole $filename;
+echo "calma;lef write;extract all;ext2spice lvs;ext2spice cthresh 100000;ext2spice extresist off;ext2spice;" | magic -dnull -noconsole $filename;
 done
 echo "calma;lef write -pinonly;" | magic -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__xnor2_2.mag";
 echo "calma;lef write -pinonly;" | magic -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__xnor2_4.mag";
@@ -32,5 +32,12 @@ cat $filename >> lef/gf180mcu_as_sc_mcu7t3v3.lef;
 done
 echo "END LIBRARY" >> lef/gf180mcu_as_sc_mcu7t3v3.lef;
 rm -f *.lef
+mkdir cds/
+touch cds/gf180mcu_as_sc_mcu7t3v3.cds
+for filename in *.spice; do
+cat $filename >> cds/gf180mcu_as_sc_mcu7t3v3.cds;
+done
+rm -f *.ext
+rm -f *.spice
 
 python3 gen_merged_gds.py gds/*
