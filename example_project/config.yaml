@@ -1,0 +1,26 @@
+# DO CHANGE
+DESIGN_NAME: user_project_example
+VERILOG_FILES: dir::src/user_project_example.v
+CLOCK_PERIOD: 20
+DIE_AREA: [0, 0, 250, 250]
+RUN_MAGIC_DRC: true
+# Valid values are AREA 0-3 and DELAY 0-4
+# DELAY 4 = fastest, but largest area
+# AREA 3 = slowest, but smallest area
+SYNTH_STRATEGY: DELAY 0
+
+
+# DO NOT CHANGE
+RUN_CTS: true
+MAX_FANOUT_CONSTRAINT: 4
+CLOCK_PORT: clk_i
+VDD_NETS: ["VDD"]
+GND_NETS: ["VSS"]
+VERILOG_POWER_DEFINE: "USE_POWER_PINS"
+RT_MAX_LAYER: Metal4
+FP_PIN_ORDER_CFG: dir::pin_order.cfg
+FP_PDN_MULTILAYER: false
+FP_SIZING: absolute
+
+STD_CELL_LIBRARY: "gf180mcu_as_sc_mcu7t3v3"
+STA_CORNERS: ["nom_tt_025C_3v30", "min_tt_025C_3v30", "max_tt_025C_3v30"]

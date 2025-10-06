@@ -1,5 +1,3 @@
-`default_nettype none
-
 module gf180mcu_as_sc_mcu7t3v3__dfxtp_2(
 	input VPW,
 	input VNW,

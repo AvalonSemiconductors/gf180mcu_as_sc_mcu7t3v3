@@ -44,6 +44,6 @@ string FIXED_BBOX 0 0 224 784
 string LEFclass CORE ANTENNACELL
 string LEFsite unithd
 string LEFsymmetry X Y
-string MASKHINTS_NPLUS -86 -86 310 354
-string MASKHINTS_PPLUS -86 354 310 870
+string MASKHINTS_NPLUS -16 -46 240 354
+string MASKHINTS_PPLUS -16 354 240 830
 << end >>

@@ -1126,8 +1126,8 @@ MACRO gf180mcu_as_sc_mcu7t3v3__aoi22_2
     PORT
       LAYER Metal1 ;
         RECT 0.205 2.650 0.435 2.815 ;
-        RECT 1.805 2.650 3.720 2.880 ;
-        RECT 0.205 2.420 2.035 2.650 ;
+        RECT 1.775 2.650 3.720 2.880 ;
+        RECT 0.205 2.420 2.065 2.650 ;
         RECT 3.405 2.480 3.720 2.650 ;
         RECT 3.490 2.335 3.720 2.480 ;
         RECT 3.490 1.240 3.930 2.335 ;
@@ -4937,7 +4937,7 @@ MACRO gf180mcu_as_sc_mcu7t3v3__tap_2
         RECT -0.430 1.770 1.550 4.350 ;
       LAYER Metal1 ;
         RECT 0.000 3.620 1.120 4.220 ;
-        RECT 0.375 1.930 0.715 3.620 ;
+        RECT 0.375 2.235 0.715 3.620 ;
     END
   END VDD
   PIN VSS
@@ -4948,7 +4948,7 @@ MACRO gf180mcu_as_sc_mcu7t3v3__tap_2
       LAYER Pwell ;
         RECT -0.430 -0.430 1.550 1.770 ;
       LAYER Metal1 ;
-        RECT 0.375 0.300 0.715 1.510 ;
+        RECT 0.375 0.300 0.715 1.380 ;
         RECT 0.000 -0.300 1.120 0.300 ;
     END
   END VSS

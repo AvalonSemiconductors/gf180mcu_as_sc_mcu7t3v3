@@ -1,35 +1,35 @@
 magic
 tech gf180mcuD
 magscale 1 10
-timestamp 1758890550
+timestamp 1759751540
 << nwell >>
 rect -86 354 310 870
 << pwell >>
 rect -86 -86 310 354
 << psubdiff >>
 rect 56 245 168 258
-rect 56 70 86 245
-rect 132 70 168 245
-rect 56 56 168 70
+rect 56 105 86 245
+rect 132 105 168 245
+rect 56 92 168 105
 << nsubdiff >>
-rect 72 665 152 712
-rect 72 431 86 665
-rect 132 431 152 665
-rect 72 384 152 431
+rect 72 691 152 704
+rect 72 457 86 691
+rect 132 457 152 691
+rect 72 444 152 457
 << psubdiffcont >>
-rect 86 70 132 245
+rect 86 105 132 245
 << nsubdiffcont >>
-rect 86 431 132 665
+rect 86 457 132 691
 << metal1 >>
 rect 0 724 224 844
-rect 75 665 143 724
-rect 75 431 86 665
-rect 132 431 143 665
-rect 75 386 143 431
-rect 75 245 143 302
-rect 75 70 86 245
-rect 132 70 143 245
-rect 75 60 143 70
+rect 75 691 143 724
+rect 75 457 86 691
+rect 132 457 143 691
+rect 75 447 143 457
+rect 75 245 143 276
+rect 75 105 86 245
+rect 132 105 143 245
+rect 75 60 143 105
 rect 0 -60 224 60
 << labels >>
 flabel metal1 s 0 724 224 844 0 FreeSans 400 0 0 0 VDD
