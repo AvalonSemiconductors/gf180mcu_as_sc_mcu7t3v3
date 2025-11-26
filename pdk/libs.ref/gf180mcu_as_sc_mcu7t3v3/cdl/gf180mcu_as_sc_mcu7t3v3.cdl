@@ -28,6 +28,44 @@ X10 a_28_68# A VDD VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.6072p ps=3.64u w=1.38u 
 X11 VSS B a_172_68# VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
 .ends
 
+* NGSPICE file created from gf180mcu_as_sc_mcu7t3v3__ao211_2.ext - technology: gf180mcuD
+
+.subckt gf180mcu_as_sc_mcu7t3v3__ao211_2 VDD VNW VPW VSS A B C D Y
+X0 a_28_440# B VDD VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X1 a_172_68# A VSS VPW nfet_03v3 ad=0.26p pd=1.52u as=0.44p ps=2.88u w=1u l=0.28u
+X2 VDD a_332_68# Y VNW pfet_03v3 ad=0.7176p pd=3.8u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X3 VSS a_332_68# Y VPW nfet_03v3 ad=0.52p pd=3.04u as=0.26p ps=1.52u w=1u l=0.28u
+X4 a_492_440# C a_28_440# VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X5 a_332_68# D VSS VPW nfet_03v3 ad=0.44p pd=2.88u as=0.26p ps=1.52u w=1u l=0.28u
+X6 a_332_68# D a_492_440# VNW pfet_03v3 ad=0.6072p pd=3.64u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X7 Y a_332_68# VDD VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.6072p ps=3.64u w=1.38u l=0.28u
+X8 Y a_332_68# VSS VPW nfet_03v3 ad=0.26p pd=1.52u as=0.44p ps=2.88u w=1u l=0.28u
+X9 VSS C a_332_68# VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+X10 VDD A a_28_440# VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.6072p ps=3.64u w=1.38u l=0.28u
+X11 a_332_68# B a_172_68# VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+.ends
+
+* NGSPICE file created from gf180mcu_as_sc_mcu7t3v3__ao211_4.ext - technology: gf180mcuD
+
+.subckt gf180mcu_as_sc_mcu7t3v3__ao211_4 VDD VNW VPW VSS A B C D Y
+X0 a_28_440# B VDD VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X1 Y a_332_68# VSS VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+X2 a_172_68# A VSS VPW nfet_03v3 ad=0.26p pd=1.52u as=0.44p ps=2.88u w=1u l=0.28u
+X3 VDD a_332_68# Y VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X4 VSS a_332_68# Y VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+X5 a_492_440# C a_28_440# VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X6 a_332_68# D VSS VPW nfet_03v3 ad=0.44p pd=2.88u as=0.26p ps=1.52u w=1u l=0.28u
+X7 Y a_332_68# VDD VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X8 a_332_68# D a_492_440# VNW pfet_03v3 ad=0.6072p pd=3.64u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X9 Y a_332_68# VDD VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.6072p ps=3.64u w=1.38u l=0.28u
+X10 Y a_332_68# VSS VPW nfet_03v3 ad=0.26p pd=1.52u as=0.44p ps=2.88u w=1u l=0.28u
+X11 VSS C a_332_68# VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+X12 VDD a_332_68# Y VNW pfet_03v3 ad=0.828p pd=3.96u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X13 VDD A a_28_440# VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.6072p ps=3.64u w=1.38u l=0.28u
+X14 VSS a_332_68# Y VPW nfet_03v3 ad=0.6p pd=3.2u as=0.26p ps=1.52u w=1u l=0.28u
+X15 a_332_68# B a_172_68# VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+.ends
+
 * NGSPICE file created from gf180mcu_as_sc_mcu7t3v3__ao21_2.ext - technology: gf180mcuD
 
 .subckt gf180mcu_as_sc_mcu7t3v3__ao21_2 VDD VNW VPW VSS Y A B C
@@ -186,6 +224,64 @@ X12 Y a_28_440# VDD VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u 
 X13 Y a_28_440# VSS VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
 X14 a_172_440# D a_28_440# VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.6072p ps=3.64u w=1.38u l=0.28u
 X15 a_332_68# A a_28_440# VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+.ends
+
+* NGSPICE file created from gf180mcu_as_sc_mcu7t3v3__aoi211_2.ext - technology: gf180mcuD
+
+.subckt gf180mcu_as_sc_mcu7t3v3__aoi211_2 VDD VNW VPW VSS A B C Y D
+X0 VDD A a_172_440# VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X1 Y D VSS VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+X2 VSS A a_28_68# VPW nfet_03v3 ad=0.26p pd=1.52u as=0.44p ps=2.88u w=1u l=0.28u
+X3 a_796_440# C a_172_440# VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X4 VSS C Y VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+X5 a_172_440# B VDD VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X6 a_28_68# B Y VPW nfet_03v3 ad=0.44p pd=2.88u as=0.26p ps=1.52u w=1u l=0.28u
+X7 Y D a_796_440# VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X8 VDD B a_172_440# VNW pfet_03v3 ad=0.6072p pd=3.64u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X9 a_172_440# C a_796_440# VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.6072p ps=3.64u w=1.38u l=0.28u
+X10 Y C VSS VPW nfet_03v3 ad=0.26p pd=1.52u as=0.44p ps=2.88u w=1u l=0.28u
+X11 Y B a_28_68# VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+X12 a_796_440# D Y VNW pfet_03v3 ad=0.6417p pd=3.69u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X13 a_172_440# A VDD VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.6072p ps=3.64u w=1.38u l=0.28u
+X14 VSS D Y VPW nfet_03v3 ad=0.465p pd=2.93u as=0.26p ps=1.52u w=1u l=0.28u
+X15 a_28_68# A VSS VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+.ends
+
+* NGSPICE file created from gf180mcu_as_sc_mcu7t3v3__aoi211_4.ext - technology: gf180mcuD
+
+.subckt gf180mcu_as_sc_mcu7t3v3__aoi211_4 VDD VNW VPW VSS A B C D Y
+X0 Y B a_172_68# VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+X1 a_28_440# A VDD VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X2 VDD B a_28_440# VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X3 a_172_68# A VSS VPW nfet_03v3 ad=0.26p pd=1.52u as=0.44p ps=2.88u w=1u l=0.28u
+X4 a_2412_440# D Y VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X5 VSS C Y VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+X6 VSS C Y VPW nfet_03v3 ad=0.44p pd=2.88u as=0.26p ps=1.52u w=1u l=0.28u
+X7 a_28_440# A VDD VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X8 a_1772_440# C a_28_440# VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X9 a_172_68# B Y VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+X10 a_1452_440# C a_28_440# VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X11 Y D a_1772_440# VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X12 Y C VSS VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+X13 Y D VSS VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+X14 VDD A a_28_440# VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X15 a_28_440# B VDD VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X16 Y B a_172_68# VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+X17 a_1452_440# D Y VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X18 a_28_440# C a_2412_440# VNW pfet_03v3 ad=0.6072p pd=3.64u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X19 VSS A a_172_68# VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+X20 VSS D Y VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+X21 a_28_440# B VDD VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X22 Y D a_1452_440# VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X23 a_172_68# A VSS VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+X24 VSS D Y VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+X25 VDD B a_28_440# VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X26 a_28_440# C a_1452_440# VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X27 a_172_68# B Y VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+X28 Y D VSS VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+X29 VDD A a_28_440# VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.6072p ps=3.64u w=1.38u l=0.28u
+X30 VSS A a_172_68# VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+X31 Y C VSS VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
 .ends
 
 * NGSPICE file created from gf180mcu_as_sc_mcu7t3v3__aoi21_2.ext - technology: gf180mcuD
@@ -1003,6 +1099,27 @@ X8 Y C VSS VPW nfet_03v3 ad=0.26p pd=1.52u as=0.58p ps=2.16u w=1u l=0.28u
 X9 Y B VSS VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
 X10 VDD A a_28_440# VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.6072p ps=3.64u w=1.38u l=0.28u
 X11 VSS A Y VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+.ends
+
+* NGSPICE file created from gf180mcu_as_sc_mcu7t3v3__oai211_2.ext - technology: gf180mcuD
+
+.subckt gf180mcu_as_sc_mcu7t3v3__oai211_2 VDD VNW VPW VSS A B C Y D
+X0 a_28_440# A VDD VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X1 a_796_68# D Y VPW nfet_03v3 ad=0.44p pd=2.88u as=0.26p ps=1.52u w=1u l=0.28u
+X2 a_172_68# A VSS VPW nfet_03v3 ad=0.26p pd=1.52u as=0.44p ps=2.88u w=1u l=0.28u
+X3 VDD C Y VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X4 Y D a_796_68# VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+X5 Y D VDD VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X6 Y B a_28_440# VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X7 a_796_68# C a_172_68# VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+X8 VSS B a_172_68# VPW nfet_03v3 ad=0.44p pd=2.88u as=0.26p ps=1.52u w=1u l=0.28u
+X9 a_28_440# B Y VNW pfet_03v3 ad=0.6072p pd=3.64u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X10 Y C VDD VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.9936p ps=4.2u w=1.38u l=0.28u
+X11 a_172_68# B VSS VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+X12 VDD D Y VNW pfet_03v3 ad=0.6072p pd=3.64u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X13 a_172_68# C a_796_68# VPW nfet_03v3 ad=0.26p pd=1.52u as=0.72p ps=3.44u w=1u l=0.28u
+X14 VDD A a_28_440# VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.6072p ps=3.64u w=1.38u l=0.28u
+X15 VSS A a_172_68# VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
 .ends
 
 * NGSPICE file created from gf180mcu_as_sc_mcu7t3v3__or2_2.ext - technology: gf180mcuD

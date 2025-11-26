@@ -7,3 +7,14 @@ y = show first DRC error
 7 = paint poly
 n = paint ndiff
 p = paint pdiff
+
+gf180mcuD DRC cheatsheet:
+Poly <-> Diffcontact: 29i
+Min contact: 46i²
+FET <-> FET: 160i
+
+P Power Contact:
+move 29i 0;paint m1;box size 46i 46i;move 0 11i;paint pdc
+
+N Power Contact:
+move 29i 0;paint m1; box size 46i 46i; move 0 21i;paint ndc

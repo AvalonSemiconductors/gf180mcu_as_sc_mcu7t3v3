@@ -1,14 +1,31 @@
 set current_folder [file dirname [file normalize [info script]]]
 # Technology lib
 
-set ::env(LIB_TYPICAL) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30.lib"
-set ::env(LIB_FASTEST) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30.lib"
-set ::env(LIB_SLOWEST) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30.lib"
+#set ::env(LIB_TYPICAL) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30.lib"
+#set ::env(LIB_FASTEST) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30.lib"
+#set ::env(LIB_SLOWEST) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30.lib"
 
-set ::env(LIB_SYNTH) $::env(LIB_TYPICAL)
+#set ::env(LIB_SYNTH) $::env(LIB_TYPICAL)
+
+set ::env(LIB) [dict create]
+dict set ::env(LIB) *_tt_025C_3v30 "\
+    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/$::env(STD_CELL_LIBRARY)__tt_025C_3v30.lib\
+    [glob $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(PAD_CELL_LIBRARY)/lib/*__tt_025C_3v30.lib]\
+"
+#dict set ::env(LIB) *_ff_n40C_5v50 "\
+#    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/$::env(STD_CELL_LIBRARY)__ff_n40C_5v50.lib\
+#    [glob $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(PAD_CELL_LIBRARY)/lib/*__ff_n40C_5v50.lib]\
+#"
+#dict set ::env(LIB) *_ss_125C_4v50 "\
+#    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/$::env(STD_CELL_LIBRARY)__ss_125C_4v50.lib\
+#    [glob $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(PAD_CELL_LIBRARY)/lib/*__ss_125C_4v50.lib]\
+#"
+
+set ::env(STA_CORNERS) "nom_tt_025C_3v30 min_tt_025C_3v30 max_tt_025C_3v30"
+set ::env(DEFAULT_CORNER) "nom_tt_025C_3v30"
 
 # MUX2 mapping
-set ::env(SYNTH_MUX_MAP) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/openlane/$::env(STD_CELL_LIBRARY)/mux2_map.v"
+set ::env(SYNTH_MUX_MAP) "$::env(PDK_ROOT)/$::env(PDK)/libs.tech/librelane/$::env(STD_CELL_LIBRARY)/mux2_map.v"
 
 # Placement site for core cells
 # This can be found in the technology lef
@@ -33,7 +50,7 @@ set ::env(SYNTH_TIEHI_PORT) "$::env(STD_CELL_LIBRARY)__tieh_4 ONE"
 set ::env(SYNTH_TIELO_PORT) "$::env(STD_CELL_LIBRARY)__tiel_4 ZERO"
 
 # Placement defaults
-set ::env(PL_LIB) $::env(LIB_TYPICAL)
+#set ::env(PL_LIB) $::env(LIB_TYPICAL)
 
 # Fillcell insertion
 set ::env(FILL_CELL) "$::env(STD_CELL_LIBRARY)__fill_*"
@@ -56,7 +73,7 @@ set ::env(CTS_MAX_CAP) 0.5
 set ::env(FP_PDN_RAIL_WIDTH) 0.6
 
 set ::env(MAX_TRANSITION_CONSTRAINT) 1.5
-set ::env(MAX_FANOUT_CONSTRAINT) 8
+set ::env(MAX_FANOUT_CONSTRAINT) 9
 set ::env(MAX_CAPACITANCE_CONSTRAINT) 0.2
 
 set ::env(GPL_CELL_PADDING) {0}

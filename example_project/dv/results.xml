@@ -1,6 +1,0 @@
-<testsuites name="results">
-  <testsuite name="all" package="all">
-    <property name="random_seed" value="1758034786" />
-    <testcase name="test_counter" classname="test" file="/foss/designs/example_project/dv/test.py" lineno="5" time="0.07076692581176758" sim_time_ns="13040.001" ratio_time="184266.8852775236" />
-  </testsuite>
-</testsuites>

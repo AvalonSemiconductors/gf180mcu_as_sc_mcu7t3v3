@@ -32,11 +32,13 @@ cat $filename >> lef/gf180mcu_as_sc_mcu7t3v3.lef;
 done
 echo "END LIBRARY" >> lef/gf180mcu_as_sc_mcu7t3v3.lef;
 rm -f *.lef
-mkdir cds/
-touch cds/gf180mcu_as_sc_mcu7t3v3.cds
+mkdir cdl/
+touch cdl/gf180mcu_as_sc_mcu7t3v3.cds
 for filename in *.spice; do
-cat $filename >> cds/gf180mcu_as_sc_mcu7t3v3.cds;
+cat $filename >> cdl/gf180mcu_as_sc_mcu7t3v3.cdl;
 done
+cp -r cdl/ spice/
+mv spice/gf180mcu_as_sc_mcu7t3v3.cdl spice/gf180mcu_as_sc_mcu7t3v3.spice
 rm -f *.ext
 rm -f *.spice
 
