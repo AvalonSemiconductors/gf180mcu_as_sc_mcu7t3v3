@@ -54,7 +54,7 @@ set ::env(SYNTH_TIELO_PORT) "$::env(STD_CELL_LIBRARY)__tiel_4 ZERO"
 
 # Fillcell insertion
 set ::env(FILL_CELL) "$::env(STD_CELL_LIBRARY)__fill_*"
-set ::env(DECAP_CELL) "$::env(STD_CELL_LIBRARY)__decap_*"
+set ::env(DECAP_CELL) "$::env(STD_CELL_LIBRARY)__fillcap_*"
 
 # Diode Insertion
 # A fake diode has to be created, for now don't use any strategy that uses fake diode
@@ -79,4 +79,4 @@ set ::env(MAX_CAPACITANCE_CONSTRAINT) 0.2
 set ::env(GPL_CELL_PADDING) {0}
 set ::env(DPL_CELL_PADDING) {0}
 
-set ::env(TRISTATE_CELL_PREFIX) "$::env(STD_CELL_LIBRARY)__bufz"
+set ::env(TRISTATE_CELL_PREFIX) "$::env(STD_CELL_LIBRARY)__invz"

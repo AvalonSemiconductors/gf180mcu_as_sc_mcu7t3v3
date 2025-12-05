@@ -3197,180 +3197,6 @@ VERSION 5.7 ;
   NOWIREEXTENSIONATPIN ON ;
   DIVIDERCHAR "/" ;
   BUSBITCHARS "[]" ;
-MACRO gf180mcu_as_sc_mcu7t3v3__decap_16
-  CLASS CORE SPACER ;
-  FOREIGN gf180mcu_as_sc_mcu7t3v3__decap_16 ;
-  ORIGIN 0.000 0.000 ;
-  SIZE 8.960 BY 3.920 ;
-  SYMMETRY X Y ;
-  SITE unithd ;
-  PIN VDD
-    DIRECTION INOUT ;
-    USE POWER ;
-    SHAPE ABUTMENT ;
-    PORT
-      LAYER Metal1 ;
-        RECT 0.000 3.620 8.960 4.220 ;
-        RECT 8.525 2.555 8.755 3.620 ;
-    END
-  END VDD
-  PIN VNW
-    DIRECTION INOUT ;
-    USE POWER ;
-    PORT
-      LAYER Nwell ;
-        RECT -0.430 1.770 9.390 4.350 ;
-    END
-  END VNW
-  PIN VPW
-    DIRECTION INOUT ;
-    USE GROUND ;
-    PORT
-      LAYER Pwell ;
-        RECT -0.430 -0.430 9.390 1.770 ;
-    END
-  END VPW
-  PIN VSS
-    DIRECTION INOUT ;
-    USE GROUND ;
-    SHAPE ABUTMENT ;
-    PORT
-      LAYER Metal1 ;
-        RECT 0.205 0.300 0.435 0.740 ;
-        RECT 0.000 -0.300 8.960 0.300 ;
-    END
-  END VSS
-  OBS
-      LAYER Metal1 ;
-        RECT 0.240 1.735 0.470 3.390 ;
-        RECT 8.020 2.095 8.755 2.325 ;
-        RECT 0.240 1.500 1.040 1.735 ;
-        RECT 0.650 1.440 1.040 1.500 ;
-        RECT 8.525 0.980 8.755 2.095 ;
-  END
-END gf180mcu_as_sc_mcu7t3v3__decap_16
-
-
-VERSION 5.7 ;
-  NOWIREEXTENSIONATPIN ON ;
-  DIVIDERCHAR "/" ;
-  BUSBITCHARS "[]" ;
-MACRO gf180mcu_as_sc_mcu7t3v3__decap_4
-  CLASS CORE SPACER ;
-  FOREIGN gf180mcu_as_sc_mcu7t3v3__decap_4 ;
-  ORIGIN 0.000 0.000 ;
-  SIZE 2.240 BY 3.920 ;
-  SYMMETRY X Y ;
-  SITE unithd ;
-  PIN VDD
-    DIRECTION INOUT ;
-    USE POWER ;
-    SHAPE ABUTMENT ;
-    PORT
-      LAYER Metal1 ;
-        RECT 0.000 3.620 2.240 4.220 ;
-        RECT 1.805 2.565 2.035 3.620 ;
-    END
-  END VDD
-  PIN VNW
-    DIRECTION INOUT ;
-    USE POWER ;
-    PORT
-      LAYER Nwell ;
-        RECT -0.430 1.770 2.670 4.350 ;
-    END
-  END VNW
-  PIN VPW
-    DIRECTION INOUT ;
-    USE GROUND ;
-    PORT
-      LAYER Pwell ;
-        RECT -0.430 -0.430 2.670 1.770 ;
-    END
-  END VPW
-  PIN VSS
-    DIRECTION INOUT ;
-    USE GROUND ;
-    SHAPE ABUTMENT ;
-    PORT
-      LAYER Metal1 ;
-        RECT 0.205 0.300 0.435 0.740 ;
-        RECT 0.000 -0.300 2.240 0.300 ;
-    END
-  END VSS
-  OBS
-      LAYER Metal1 ;
-        RECT 0.240 1.735 0.470 3.390 ;
-        RECT 1.305 2.090 2.035 2.335 ;
-        RECT 0.240 1.500 1.040 1.735 ;
-        RECT 0.650 1.440 1.040 1.500 ;
-        RECT 1.805 0.530 2.035 2.090 ;
-  END
-END gf180mcu_as_sc_mcu7t3v3__decap_4
-
-
-VERSION 5.7 ;
-  NOWIREEXTENSIONATPIN ON ;
-  DIVIDERCHAR "/" ;
-  BUSBITCHARS "[]" ;
-MACRO gf180mcu_as_sc_mcu7t3v3__decap_8
-  CLASS CORE SPACER ;
-  FOREIGN gf180mcu_as_sc_mcu7t3v3__decap_8 ;
-  ORIGIN 0.000 0.000 ;
-  SIZE 4.480 BY 3.920 ;
-  SYMMETRY X Y ;
-  SITE unithd ;
-  PIN VDD
-    DIRECTION INOUT ;
-    USE POWER ;
-    SHAPE ABUTMENT ;
-    PORT
-      LAYER Metal1 ;
-        RECT 0.000 3.620 4.480 4.220 ;
-        RECT 4.045 2.565 4.275 3.620 ;
-    END
-  END VDD
-  PIN VNW
-    DIRECTION INOUT ;
-    USE POWER ;
-    PORT
-      LAYER Nwell ;
-        RECT -0.430 1.770 4.910 4.350 ;
-    END
-  END VNW
-  PIN VPW
-    DIRECTION INOUT ;
-    USE GROUND ;
-    PORT
-      LAYER Pwell ;
-        RECT -0.430 -0.430 4.910 1.770 ;
-    END
-  END VPW
-  PIN VSS
-    DIRECTION INOUT ;
-    USE GROUND ;
-    SHAPE ABUTMENT ;
-    PORT
-      LAYER Metal1 ;
-        RECT 0.205 0.300 0.435 0.740 ;
-        RECT 0.000 -0.300 4.480 0.300 ;
-    END
-  END VSS
-  OBS
-      LAYER Metal1 ;
-        RECT 0.240 1.735 0.470 3.390 ;
-        RECT 3.520 2.095 4.275 2.335 ;
-        RECT 0.240 1.500 1.040 1.735 ;
-        RECT 0.650 1.440 1.040 1.500 ;
-        RECT 4.045 0.980 4.275 2.095 ;
-  END
-END gf180mcu_as_sc_mcu7t3v3__decap_8
-
-
-VERSION 5.7 ;
-  NOWIREEXTENSIONATPIN ON ;
-  DIVIDERCHAR "/" ;
-  BUSBITCHARS "[]" ;
 MACRO gf180mcu_as_sc_mcu7t3v3__dfxtn_2
   CLASS CORE ;
   FOREIGN gf180mcu_as_sc_mcu7t3v3__dfxtn_2 ;
@@ -3914,6 +3740,180 @@ VERSION 5.7 ;
   NOWIREEXTENSIONATPIN ON ;
   DIVIDERCHAR "/" ;
   BUSBITCHARS "[]" ;
+MACRO gf180mcu_as_sc_mcu7t3v3__fillcap_16
+  CLASS CORE SPACER ;
+  FOREIGN gf180mcu_as_sc_mcu7t3v3__fillcap_16 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 8.960 BY 3.920 ;
+  SYMMETRY X Y ;
+  SITE unithd ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.620 8.960 4.220 ;
+        RECT 8.525 2.555 8.755 3.620 ;
+    END
+  END VDD
+  PIN VNW
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Nwell ;
+        RECT -0.430 1.770 9.390 4.350 ;
+    END
+  END VNW
+  PIN VPW
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Pwell ;
+        RECT -0.430 -0.430 9.390 1.770 ;
+    END
+  END VPW
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.205 0.300 0.435 0.740 ;
+        RECT 0.000 -0.300 8.960 0.300 ;
+    END
+  END VSS
+  OBS
+      LAYER Metal1 ;
+        RECT 0.240 1.735 0.470 3.390 ;
+        RECT 8.020 2.095 8.755 2.325 ;
+        RECT 0.240 1.500 1.040 1.735 ;
+        RECT 0.650 1.440 1.040 1.500 ;
+        RECT 8.525 0.980 8.755 2.095 ;
+  END
+END gf180mcu_as_sc_mcu7t3v3__fillcap_16
+
+
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO gf180mcu_as_sc_mcu7t3v3__fillcap_4
+  CLASS CORE SPACER ;
+  FOREIGN gf180mcu_as_sc_mcu7t3v3__fillcap_4 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 2.240 BY 3.920 ;
+  SYMMETRY X Y ;
+  SITE unithd ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.620 2.240 4.220 ;
+        RECT 1.805 2.565 2.035 3.620 ;
+    END
+  END VDD
+  PIN VNW
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Nwell ;
+        RECT -0.430 1.770 2.670 4.350 ;
+    END
+  END VNW
+  PIN VPW
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Pwell ;
+        RECT -0.430 -0.430 2.670 1.770 ;
+    END
+  END VPW
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.205 0.300 0.435 0.740 ;
+        RECT 0.000 -0.300 2.240 0.300 ;
+    END
+  END VSS
+  OBS
+      LAYER Metal1 ;
+        RECT 0.240 1.735 0.470 3.390 ;
+        RECT 1.305 2.090 2.035 2.335 ;
+        RECT 0.240 1.500 1.040 1.735 ;
+        RECT 0.650 1.440 1.040 1.500 ;
+        RECT 1.805 0.530 2.035 2.090 ;
+  END
+END gf180mcu_as_sc_mcu7t3v3__fillcap_4
+
+
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO gf180mcu_as_sc_mcu7t3v3__fillcap_8
+  CLASS CORE SPACER ;
+  FOREIGN gf180mcu_as_sc_mcu7t3v3__fillcap_8 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 4.480 BY 3.920 ;
+  SYMMETRY X Y ;
+  SITE unithd ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.620 4.480 4.220 ;
+        RECT 4.045 2.565 4.275 3.620 ;
+    END
+  END VDD
+  PIN VNW
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Nwell ;
+        RECT -0.430 1.770 4.910 4.350 ;
+    END
+  END VNW
+  PIN VPW
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Pwell ;
+        RECT -0.430 -0.430 4.910 1.770 ;
+    END
+  END VPW
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.205 0.300 0.435 0.740 ;
+        RECT 0.000 -0.300 4.480 0.300 ;
+    END
+  END VSS
+  OBS
+      LAYER Metal1 ;
+        RECT 0.240 1.735 0.470 3.390 ;
+        RECT 3.520 2.095 4.275 2.335 ;
+        RECT 0.240 1.500 1.040 1.735 ;
+        RECT 0.650 1.440 1.040 1.500 ;
+        RECT 4.045 0.980 4.275 2.095 ;
+  END
+END gf180mcu_as_sc_mcu7t3v3__fillcap_8
+
+
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
 MACRO gf180mcu_as_sc_mcu7t3v3__inv_2
   CLASS CORE ;
   FOREIGN gf180mcu_as_sc_mcu7t3v3__inv_2 ;
@@ -4140,6 +4140,131 @@ MACRO gf180mcu_as_sc_mcu7t3v3__inv_6
     END
   END A
 END gf180mcu_as_sc_mcu7t3v3__inv_6
+
+
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO gf180mcu_as_sc_mcu7t3v3__invz_2
+  CLASS CORE ;
+  FOREIGN gf180mcu_as_sc_mcu7t3v3__invz_2 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 8.960 BY 3.920 ;
+  SYMMETRY X Y ;
+  SITE unithd ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.620 8.960 4.220 ;
+        RECT 1.105 3.145 1.335 3.620 ;
+        RECT 5.145 3.160 5.375 3.620 ;
+        RECT 7.595 3.160 7.825 3.620 ;
+    END
+  END VDD
+  PIN VNW
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Nwell ;
+        RECT -0.430 1.770 9.390 4.350 ;
+    END
+  END VNW
+  PIN VPW
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Pwell ;
+        RECT -0.430 -0.430 9.390 1.770 ;
+    END
+  END VPW
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 1.005 0.300 1.235 0.750 ;
+        RECT 5.090 0.300 5.430 0.635 ;
+        RECT 7.645 0.300 7.875 1.250 ;
+        RECT 0.000 -0.300 8.960 0.300 ;
+    END
+  END VSS
+  PIN EN
+    ANTENNAGATEAREA 1.332800 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.670 1.975 2.195 2.450 ;
+        RECT 0.670 1.570 0.900 1.975 ;
+        RECT 1.965 1.600 2.195 1.975 ;
+    END
+  END EN
+  PIN A
+    ANTENNAGATEAREA 0.666400 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 7.135 2.050 8.190 2.450 ;
+        RECT 7.960 1.650 8.190 2.050 ;
+    END
+  END A
+  PIN Y
+    ANTENNADIFFAREA 2.144600 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 6.205 2.230 6.905 2.910 ;
+        RECT 6.565 1.430 6.905 2.230 ;
+        RECT 6.305 0.990 6.905 1.430 ;
+    END
+  END Y
+  OBS
+      LAYER Metal1 ;
+        RECT 0.205 2.915 0.435 3.390 ;
+        RECT 2.230 3.145 4.020 3.390 ;
+        RECT 0.205 2.685 2.880 2.915 ;
+        RECT 0.205 1.335 0.435 2.685 ;
+        RECT 2.650 2.090 2.880 2.685 ;
+        RECT 3.125 2.510 3.355 2.900 ;
+        RECT 3.125 2.265 3.425 2.510 ;
+        RECT 2.650 1.750 2.965 2.090 ;
+        RECT 1.290 1.515 1.630 1.745 ;
+        RECT 3.195 1.590 3.425 2.265 ;
+        RECT 1.290 1.335 1.575 1.515 ;
+        RECT 0.205 1.100 1.575 1.335 ;
+        RECT 3.155 1.360 3.425 1.590 ;
+        RECT 3.790 1.565 4.020 3.145 ;
+        RECT 5.685 3.150 7.365 3.380 ;
+        RECT 5.685 2.840 5.915 3.150 ;
+        RECT 4.360 2.610 5.915 2.840 ;
+        RECT 7.135 2.915 7.365 3.150 ;
+        RECT 8.445 2.915 8.675 3.390 ;
+        RECT 7.135 2.685 8.675 2.915 ;
+        RECT 4.360 2.035 4.590 2.610 ;
+        RECT 4.250 1.805 4.590 2.035 ;
+        RECT 4.825 2.150 5.975 2.380 ;
+        RECT 4.825 1.565 5.055 2.150 ;
+        RECT 5.745 2.000 5.975 2.150 ;
+        RECT 0.205 0.945 0.435 1.100 ;
+        RECT 1.805 0.760 2.035 1.290 ;
+        RECT 3.155 0.760 3.385 1.360 ;
+        RECT 3.790 1.335 5.055 1.565 ;
+        RECT 3.790 1.235 4.020 1.335 ;
+        RECT 3.620 0.990 4.020 1.235 ;
+        RECT 5.285 1.105 5.515 1.845 ;
+        RECT 5.745 1.710 6.335 2.000 ;
+        RECT 6.105 1.660 6.335 1.710 ;
+        RECT 7.185 1.480 7.575 1.820 ;
+        RECT 4.615 0.865 6.060 1.105 ;
+        RECT 4.615 0.760 4.855 0.865 ;
+        RECT 1.805 0.530 4.855 0.760 ;
+        RECT 5.830 0.760 6.060 0.865 ;
+        RECT 7.185 0.760 7.415 1.480 ;
+        RECT 8.445 0.945 8.675 2.685 ;
+        RECT 5.830 0.530 7.415 0.760 ;
+  END
+END gf180mcu_as_sc_mcu7t3v3__invz_2
 
 
 VERSION 5.7 ;
