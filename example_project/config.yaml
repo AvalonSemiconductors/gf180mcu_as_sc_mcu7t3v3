@@ -1,9 +1,21 @@
+meta:
+  version: 3
+  flow: Classic
+  substituting_steps:
+    +Magic.DRC: KLayout.Antenna
+    +Checker.MagicDRC: Checker.KLayoutAntenna
+    +Checker.MaxCapViolations: KLayout.Render
+
 # DO CHANGE
 DESIGN_NAME: user_project_example
 VERILOG_FILES: ["dir::src/user_project_example.v", "dir::src/tholin_riscv.v", "dir::src/uart.v", "dir::src/spi.v"]
 CLOCK_PERIOD: 25
 DIE_AREA: [0, 0, 1500, 1500]
+DESIGN_REPAIR_TIE_FANOUT: true
+DIODE_ON_PORTS: both
 RUN_MAGIC_DRC: true
+DRT_ANTENNA_REPAIR_ITERS: 3
+GRT_ANTENNA_ITERS: 10
 # Valid values are AREA 0-3 and DELAY 0-4
 # DELAY 4 = fastest, but largest area
 # AREA 3 = slowest, but smallest area

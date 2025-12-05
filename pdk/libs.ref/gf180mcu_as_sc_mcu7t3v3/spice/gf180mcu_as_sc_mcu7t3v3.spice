@@ -665,6 +665,45 @@ X_M20 VSS A a_172_68# VPW nfet_03v3 ad=0.1872p pd=1.24u as=0.1872p ps=1.24u w=0.
 X_M21 Y a_172_68# VSS VPW nfet_03v3 ad=0.7776p pd=3.6u as=0.1872p ps=1.24u w=0.72u l=0.28u
 .ends
 
+* NGSPICE file created from gf180mcu_as_sc_mcu7t3v3__dfsrtp_2.ext - technology: gf180mcuD
+
+.subckt gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 VDD VNW VPW VSS CLK Q RN SN D
+X_M0 a_332_68# a_28_68# VDD VNW pfet_03v3 ad=0.6693p pd=3.73u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X_M1 a_1430_68# a_1356_395# a_1314_68# VPW nfet_03v3 ad=0.215p pd=1.43u as=0.15p ps=1.3u w=1u l=0.28u
+X_M2 a_1118_440# a_28_68# a_833_440# VNW pfet_03v3 ad=0.8211p pd=2.57u as=0.7866p ps=2.52u w=1.38u l=0.285u
+X_M3 VSS CLK a_28_68# VPW nfet_03v3 ad=0.26p pd=1.52u as=0.44p ps=2.88u w=1u l=0.28u
+X_M4 a_1356_395# SN a_1794_68# VPW nfet_03v3 ad=0.48p pd=1.96u as=0.405p ps=1.81u w=1u l=0.28u
+X_M5 VSS a_3062_24# Q VPW nfet_03v3 ad=0.615p pd=3.23u as=0.26p ps=1.52u w=1u l=0.28u
+X_M6 VSS a_3062_24# a_2951_68# VPW nfet_03v3 ad=0.38p pd=1.76u as=0.2775p ps=1.555u w=1u l=0.28u
+X_M7 a_1794_68# a_833_440# VSS VPW nfet_03v3 ad=0.405p pd=1.81u as=0.415p ps=1.83u w=1u l=0.28u
+X_M8 a_2447_68# a_28_68# a_2260_68# VPW nfet_03v3 ad=1.23p pd=4.46u as=0.3275p ps=1.655u w=1u l=0.28u
+X_M9 a_639_68# D VDD VNW pfet_03v3 ad=0.4554p pd=2.04u as=0.7107p ps=3.79u w=1.38u l=0.285u
+X_M10 VDD a_3062_24# a_2447_68# VNW pfet_03v3 ad=0.4554p pd=2.04u as=0.45195p ps=2.035u w=1.38u l=0.28u
+X_M11 VDD a_833_440# a_1356_395# VNW pfet_03v3 ad=0.5037p pd=2.11u as=0.6072p ps=3.64u w=1.38u l=0.28u
+X_M12 a_2447_68# a_332_68# a_2260_68# VNW pfet_03v3 ad=0.8487p pd=3.99u as=0.44505p ps=2.025u w=1.38u l=0.28u
+X_M13 VDD a_1356_395# a_1118_440# VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.8211p ps=2.57u w=1.38u l=0.28u
+X_M14 Q a_3062_24# VDD VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.6072p ps=3.64u w=1.38u l=0.28u
+X_M15 Q a_3062_24# VSS VPW nfet_03v3 ad=0.26p pd=1.52u as=0.44p ps=2.88u w=1u l=0.28u
+X_M16 a_2447_68# SN VDD VNW pfet_03v3 ad=0.45195p pd=2.035u as=0.7452p ps=3.84u w=1.38u l=0.28u
+X_M17 VSS RN a_1430_68# VPW nfet_03v3 ad=0.415p pd=1.83u as=0.215p ps=1.43u w=1u l=0.28u
+X_M18 a_639_68# D VSS VPW nfet_03v3 ad=0.62p pd=2.24u as=0.49p ps=2.98u w=1u l=0.28u
+X_M19 a_833_440# a_28_68# a_639_68# VPW nfet_03v3 ad=0.7875p pd=2.575u as=0.62p ps=2.24u w=1u l=0.28u
+X_M20 a_2260_68# a_28_68# a_1356_395# VNW pfet_03v3 ad=0.44505p pd=2.025u as=0.89355p ps=2.675u w=1.38u l=0.28u
+X_M21 VDD a_2260_68# a_3062_24# VNW pfet_03v3 ad=0.8211p pd=3.95u as=0.4485p ps=2.03u w=1.38u l=0.28u
+X_M22 a_3062_24# RN VDD VNW pfet_03v3 ad=0.4485p pd=2.03u as=0.4554p ps=2.04u w=1.38u l=0.28u
+X_M23 a_833_440# a_332_68# a_639_68# VNW pfet_03v3 ad=0.7866p pd=2.52u as=0.4554p ps=2.04u w=1.38u l=0.28u
+X_M24 VDD a_3062_24# Q VNW pfet_03v3 ad=0.8487p pd=3.99u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X_M25 a_1118_440# RN VDD VNW pfet_03v3 ad=0.6279p pd=3.67u as=0.3588p ps=1.9u w=1.38u l=0.28u
+X_M26 a_2260_68# a_332_68# a_1356_395# VPW nfet_03v3 ad=0.3275p pd=1.655u as=0.48p ps=1.96u w=1u l=0.28u
+X_M27 a_3062_24# a_2260_68# a_3326_68# VPW nfet_03v3 ad=0.505p pd=3.01u as=0.325p ps=1.65u w=1u l=0.28u
+X_M28 a_1356_395# SN VDD VNW pfet_03v3 ad=0.89355p pd=2.675u as=0.5037p ps=2.11u w=1.38u l=0.28u
+X_M29 a_1314_68# a_332_68# a_833_440# VPW nfet_03v3 ad=0.15p pd=1.3u as=0.7875p ps=2.575u w=1u l=0.28u
+X_M30 a_2951_68# SN a_2447_68# VPW nfet_03v3 ad=0.2775p pd=1.555u as=0.61p ps=3.22u w=1u l=0.28u
+X_M31 VDD CLK a_28_68# VNW pfet_03v3 ad=0.3588p pd=1.9u as=0.6072p ps=3.64u w=1.38u l=0.28u
+X_M32 a_3326_68# RN VSS VPW nfet_03v3 ad=0.325p pd=1.65u as=0.38p ps=1.76u w=1u l=0.28u
+X_M33 a_332_68# a_28_68# VSS VPW nfet_03v3 ad=0.485p pd=2.97u as=0.26p ps=1.52u w=1u l=0.28u
+.ends
+
 * NGSPICE file created from gf180mcu_as_sc_mcu7t3v3__dfxtn_2.ext - technology: gf180mcuD
 
 .subckt gf180mcu_as_sc_mcu7t3v3__dfxtn_2 VDD VNW VPW VSS CLK D Q

@@ -1,3 +1,5 @@
 utils/lctime/
 test_design/
 docs/venv/
+example_project/gf180mcu_pdk
+example_project/runs/
