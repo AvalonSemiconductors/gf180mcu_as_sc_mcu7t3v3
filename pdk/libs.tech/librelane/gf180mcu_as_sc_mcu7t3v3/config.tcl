@@ -12,16 +12,16 @@ dict set ::env(LIB) *_tt_025C_3v30 "\
     $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/$::env(STD_CELL_LIBRARY)__tt_025C_3v30.lib\
     [glob $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(PAD_CELL_LIBRARY)/lib/*__tt_025C_3v30.lib]\
 "
-#dict set ::env(LIB) *_ff_n40C_5v50 "\
-#    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/$::env(STD_CELL_LIBRARY)__ff_n40C_5v50.lib\
-#    [glob $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(PAD_CELL_LIBRARY)/lib/*__ff_n40C_5v50.lib]\
-#"
+dict set ::env(LIB) *_ff_n40C_3v60 "\
+    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/$::env(STD_CELL_LIBRARY)__ff_n40C_3v60.lib\
+    [glob $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(PAD_CELL_LIBRARY)/lib/*__ff_n40C_3v63.lib]\
+"
 #dict set ::env(LIB) *_ss_125C_4v50 "\
 #    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/$::env(STD_CELL_LIBRARY)__ss_125C_4v50.lib\
 #    [glob $::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(PAD_CELL_LIBRARY)/lib/*__ss_125C_4v50.lib]\
 #"
 
-set ::env(STA_CORNERS) "nom_tt_025C_3v30 min_tt_025C_3v30 max_tt_025C_3v30"
+set ::env(STA_CORNERS) "nom_tt_025C_3v30 min_tt_025C_3v30 max_tt_025C_3v30 nom_ff_n40C_3v60 min_ff_n40C_3v60 max_ff_n40C_3v60"
 set ::env(DEFAULT_CORNER) "nom_tt_025C_3v30"
 
 # MUX2 mapping
