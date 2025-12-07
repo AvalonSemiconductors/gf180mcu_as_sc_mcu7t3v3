@@ -15,6 +15,55 @@ assign Q = state;
 
 endmodule
 
+module gf180mcu_as_sc_mcu7t3v3__dfxtn_2(
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+	
+	input CLK,
+	input D,
+	output Q
+);
+
+reg state;
+always @(negedge CLK) state <= D;
+assign Q = state;
+
+endmodule
+
+module gf180mcu_as_sc_mcu7t3v3__dfsrtp_2(
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+
+	input CLK,
+	input D,
+	input RN,
+	input SN,
+	output Q
+);
+
+reg state;
+wire sr;
+
+assign sr = ~(RN & SN);
+
+always @(posedge CLK or posedge sr) begin
+	if (sr == 1'b1) begin
+	if (RN == 1'b0) begin
+		Q <= 1'b0;
+	end else if (SN == 1'b0) begin
+		Q <= 1'b1;
+	end
+	end else begin
+		Q <= state;
+	end
+end
+
+endmodule
+
 module gf180mcu_as_sc_mcu7t3v3__buff_2(
 	input VPW,
 	input VNW,
@@ -152,6 +201,21 @@ module gf180mcu_as_sc_mcu7t3v3__inv_6(
 );
 
 assign Y = !A;
+
+endmodule
+
+module gf180mcu_as_sc_mcu7t3v3__invz_2(
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+
+	input A,
+	input EN,
+	output Y
+);
+
+assign Y = (EN == 1'b1) ? ~A : 1'bz;
 
 endmodule
 
@@ -787,7 +851,7 @@ module gf180mcu_as_sc_mcu7t3v3__fill_8(
 
 endmodule
 
-module gf180mcu_as_sc_mcu7t3v3__decap_4(
+module gf180mcu_as_sc_mcu7t3v3__fillcap_4(
 	input VPW,
 	input VNW,
 	input VDD,
@@ -796,7 +860,7 @@ module gf180mcu_as_sc_mcu7t3v3__decap_4(
 
 endmodule
 
-module gf180mcu_as_sc_mcu7t3v3__decap_8(
+module gf180mcu_as_sc_mcu7t3v3__fillcap_8(
 	input VPW,
 	input VNW,
 	input VDD,
@@ -805,7 +869,7 @@ module gf180mcu_as_sc_mcu7t3v3__decap_8(
 
 endmodule
 
-module gf180mcu_as_sc_mcu7t3v3__decap_16(
+module gf180mcu_as_sc_mcu7t3v3__fillcap_16(
 	input VPW,
 	input VNW,
 	input VDD,
