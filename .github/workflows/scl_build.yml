@@ -35,13 +35,11 @@ jobs:
         run: make clone-pdk
       - name: Setup environment variables for magic
         run: |
-          echo "PDK_ROOT=$(pwd)/gf180mcu_pdk" >> $GITHUB_ENV
+          echo "PDK_ROOT=$(pwd)/example_project/gf180mcu_pdk" >> $GITHUB_ENV
           echo "PDK=gf180mcuD" >> $GITHUB_ENV
       - name: Generate views
         working-directory: ./pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3
-        run: |
-          tree ../../../
-          nix develop --command make views
+        run: nix develop --command make views
       - name: Tarball SCL
         run: |
           tar -cf /tmp/scl.tar -C . .
