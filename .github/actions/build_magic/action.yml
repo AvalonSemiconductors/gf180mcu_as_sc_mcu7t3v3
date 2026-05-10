@@ -5,12 +5,15 @@ runs:
   steps:
     - id: Packages
       name: Install required packages
+      shell: bash
       run: sudo apt-get update && sudo apt-get install -y tcl tk tcl-dev tk-dev zlib1g-dev python3-dev tcsh blt libcairo2-dev
     - id: Clone
       name: Clone magic
+      shell: bash
       run: git clone https://github.com/RTimothyEdwards/magic
     - id: Build
       name: Build magic
+      shell: bash
       working-directory: ./magic
       run: |
         git checkout 8.3.637
@@ -20,4 +23,5 @@ runs:
         sudo make install
     - id: Cleanup
       name: Clean up
+      shell: bash
       run: sudo rm -rf magic
