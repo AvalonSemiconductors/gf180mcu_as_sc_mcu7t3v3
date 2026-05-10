@@ -16,13 +16,14 @@ jobs:
           remove-codeql: "true"
           remove-docker-images: "true"
       - name: Install required packages
-        run: sudo apt-get update && sudo apt-get install -y klayout
+        run: sudo apt-get update && sudo apt-get install -y klayout tcl tk zlib1g-dev python3-dev tcsh blt libcairo2-dev
       - name: Clone magic repo
         run: git clone https://github.com/RTimothyEdwards/magic
       - name: Install magic from source
         working-directory: ./magic
         run: |
           git checkout 8.3.637
+          export CFLAGS="${CFLAGS} -std=c17 -D_DEFAULT_SOURCE=1"
           ./configure
           make
           sudo make install
