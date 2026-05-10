@@ -2,7 +2,7 @@
 
 set -e
 
-echo "extract all;ext2sim labels on;ext2sim;extresist tolerance 10;extresist;ext2spice lvs;ext2spice cthresh 0;ext2spice extresist on;ext2spice;" | magic -rcfile ../automated.magicrc -dnull $1.mag
+echo "extract all;ext2sim labels on;ext2sim;extresist tolerance 10;extresist;ext2spice lvs;ext2spice cthresh 0;ext2spice extresist on;ext2spice;" | magic -noconsole -rcfile ../automated.magicrc -dnull $1.mag
 rm $1.ext
 rm $1.res.ext
 rm $1.nodes
