@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e -o pipefail
+set -eo pipefail
 
 rm -rf temp/
 mkdir temp/
