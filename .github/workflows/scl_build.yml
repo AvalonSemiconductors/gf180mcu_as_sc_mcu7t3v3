@@ -4,10 +4,32 @@ on: [ push, workflow_dispatch ]
 
 jobs:
   views:
-    runs-on: hpretl/iic-osic-tools:latest
+    runs-on: ubuntu-24.04
     name: Generate various views from MAG
     steps:
+      - name: Maximize build space
+        uses: AdityaGarg8/remove-unwanted-software@v5
+        with:
+          remove-dotnet: "true"
+          remove-android: "true"
+          remove-haskell: "true"
+          remove-codeql: "true"
+          remove-docker-images: "true"
       - uses: actions/checkout@v4
+      - name: Setup Nix
+        uses: ./.github/actions/setup_nix
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          nix_cache_domain: ${{ vars.NIX_CACHE }}
+          nix_public_key: ${{ vars.NIX_PUBLIC_KEY }}
+      - name: Build with Nix
+        uses: ./.github/actions/build_nix
+        with:
+          nix_system: x86_64-linux
+      - name: Check Nix
+        run: |
+          sudo du -hs /nix/store/* | sort -h | tail -n 10
+          sudo tree /nix/store/*-librelane || true
       - name: Generate views
         working-directory: ./pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3
         run: make views
