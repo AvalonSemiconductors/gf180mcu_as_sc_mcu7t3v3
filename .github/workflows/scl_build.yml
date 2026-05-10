@@ -4,7 +4,7 @@ on: [ push, workflow_dispatch ]
 
 jobs:
   views:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     name: Generate various views from MAG
     steps:
       - name: Maximize build space
