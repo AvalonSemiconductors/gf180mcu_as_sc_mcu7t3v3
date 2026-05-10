@@ -11,12 +11,12 @@ sed -i '/string GDS_FILE.*/d' $filename;
 done
 
 for filename in temp/*; do
-echo "calma;lef write;extract all;ext2spice lvs;ext2spice cthresh 100000;ext2spice extresist off;ext2spice;" | magic -rcfile automated.magicrc -dnull -noconsole $filename;
+echo "calma;lef write;extract all;ext2spice lvs;ext2spice cthresh 100000;ext2spice extresist off;ext2spice;" | magic -rcfile automated.magicrc -dnull $filename;
 done
-echo "calma;lef write -pinonly;" | magic -rcfile automated.magicrc -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__xnor2_2.mag";
-echo "calma;lef write -pinonly;" | magic -rcfile automated.magicrc -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__xnor2_4.mag";
-echo "calma;lef write -pinonly;" | magic -rcfile automated.magicrc -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__xor2_2.mag";
-echo "calma;lef write -pinonly;" | magic -rcfile automated.magicrc -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__xor2_4.mag";
+echo "calma;lef write -pinonly;" | magic -rcfile automated.magicrc -dnull "temp/gf180mcu_as_sc_mcu7t3v3__xnor2_2.mag";
+echo "calma;lef write -pinonly;" | magic -rcfile automated.magicrc -dnull "temp/gf180mcu_as_sc_mcu7t3v3__xnor2_4.mag";
+echo "calma;lef write -pinonly;" | magic -rcfile automated.magicrc -dnull "temp/gf180mcu_as_sc_mcu7t3v3__xor2_2.mag";
+echo "calma;lef write -pinonly;" | magic -rcfile automated.magicrc -dnull "temp/gf180mcu_as_sc_mcu7t3v3__xor2_4.mag";
 
 rm -rf gds/
 mkdir gds/
@@ -49,7 +49,7 @@ rm -f *.spice
 #cd temp/
 #rm -f *.spice
 #for filename in *.mag; do
-#echo "extract all;ext2sim labels on;ext2sim;extresist tolerance 10;extresist;ext2spice lvs;ext2spice cthresh 0;ext2spice extresist on;ext2spice;" | magic -rcfile ../automated.magicrc -dnull -noconsole $filename;
+#echo "extract all;ext2sim labels on;ext2sim;extresist tolerance 10;extresist;ext2spice lvs;ext2spice cthresh 0;ext2spice extresist on;ext2spice;" | magic -rcfile ../automated.magicrc -dnull $filename;
 #done
 #for filename in *.spice; do
 #cat $filename >> ../spice/gf180mcu_as_sc_mcu7t3v3_parasitics.spice;

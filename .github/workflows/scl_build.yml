@@ -28,6 +28,8 @@ jobs:
           sudo make install
       - name: Cleanup magic build dir
         run: sudo rm -rf magic
+      - name: Print magic version
+        run: magic --version
       - uses: actions/checkout@v4
       - name: Clone PDK
         working-directory: ./example_project
