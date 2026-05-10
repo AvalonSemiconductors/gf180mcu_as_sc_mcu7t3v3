@@ -40,11 +40,8 @@ jobs:
       - name: Generate views
         working-directory: ./pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3
         run: nix develop --command make views
-      - name: Tarball SCL
-        run: |
-          tar -cf /tmp/scl.tar -C . .
-      - name: Upload SCL Tarball
+      - name: Upload SCL artifact
         uses: actions/upload-artifact@v4
         with:
           name: scl-tarball
-          path: /tmp/scl.tar
+          path: pdk/*
