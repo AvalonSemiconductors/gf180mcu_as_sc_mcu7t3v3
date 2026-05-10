@@ -16,7 +16,18 @@ jobs:
           remove-codeql: "true"
           remove-docker-images: "true"
       - name: Install required packages
-        run: sudo apt-get update && sudo apt-get install -y magic klayout
+        run: sudo apt-get update && sudo apt-get install -y klayout
+      - name: Clone magic repo
+        run: git clone https://github.com/RTimothyEdwards/magic
+      - name: Install magic from source
+        working-directory: ./magic
+        run: |
+          git checkout 8.3.637
+          ./configure
+          make
+          sudo make install
+      - name: Cleanup magic build dir
+        run: sudo rm -rf magic
       - uses: actions/checkout@v4
       - name: Clone PDK
         working-directory: ./example_project
