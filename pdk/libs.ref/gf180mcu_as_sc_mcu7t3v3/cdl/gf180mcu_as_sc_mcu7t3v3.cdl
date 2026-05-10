@@ -849,8 +849,8 @@ M_M29 a_332_68# a_28_68# VSS VPW nfet_03v3 ad=0.485p pd=2.97u as=0.26p ps=1.52u 
 * NGSPICE file created from gf180mcu_as_sc_mcu7t3v3__diode_2.ext - technology: gf180mcuD
 
 .subckt gf180mcu_as_sc_mcu7t3v3__diode_2 VDD VNW VPW VSS DIODE
-D0 DIODE VNW diode_pd2nw_03v3 pj=1.93u area=0.2295p
-D1 VPW DIODE diode_nd2ps_03v3 pj=1.83u area=0.209p
+D0 VPW DIODE diode_nd2ps_03v3 pj=1.83u area=0.209p
+D1 DIODE VNW diode_pd2nw_03v3 pj=1.93u area=0.2295p
 .ends
 
 * NGSPICE file created from gf180mcu_as_sc_mcu7t3v3__fill_1.ext - technology: gf180mcuD

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e pipefail
+set -e -pipefail
 
 slew_times="0.01, 0.023, 0.053, 0.122, 0.28, 0.65, 1.5"
 corner=ss
