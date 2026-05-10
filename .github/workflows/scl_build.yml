@@ -19,8 +19,8 @@ jobs:
         run: |
           sudo apt-get update && sudo apt-get install -y klayout
           pip3 install klayout
-      - uses: ./.github/actions/build_magic
       - uses: actions/checkout@v4
+      - uses: ./.github/actions/build_magic
       - name: Clone PDK
         working-directory: ./example_project
         run: make clone-pdk
