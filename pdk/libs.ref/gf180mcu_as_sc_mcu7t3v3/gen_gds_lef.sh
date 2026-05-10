@@ -15,7 +15,8 @@ echo "calma;lef write;extract all;ext2spice lvs;ext2spice cthresh 100000;ext2spi
 done
 echo "calma;lef write -pinonly;" | magic -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__xnor2_2.mag";
 echo "calma;lef write -pinonly;" | magic -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__xnor2_4.mag";
-rm -rf temp/
+echo "calma;lef write -pinonly;" | magic -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__xor2_2.mag";
+echo "calma;lef write -pinonly;" | magic -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__xor2_4.mag";
 
 rm -rf gds/
 mkdir gds/
@@ -44,5 +45,17 @@ sed -i '/^M/s/^/M_/' cdl/gf180mcu_as_sc_mcu7t3v3.cdl
 sed -i '/^M/s/^/X_/' spice/gf180mcu_as_sc_mcu7t3v3.spice
 rm -f *.ext
 rm -f *.spice
+
+for filename in temp/*; do
+echo "extract all;ext2sim labels on;ext2sim;extresist tolerance 10;extresist;ext2spice lvs;ext2spice cthresh 0;ext2spice extresist on;ext2spice;" | magic -dnull -noconsole $filename;
+done
+for filename in *.spice; do
+cat $filename >> spice/gf180mcu_as_sc_mcu7t3v3_parasitics.spice;
+done
+rm -f *.ext
+rm -f *.spice
+rm -f *.nodes
+rm -f *.sim
+rm -rf temp/
 
 python3 gen_merged_gds.py gds/*

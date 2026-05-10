@@ -120,6 +120,20 @@ assign Y = A;
 
 endmodule
 
+module gf180mcu_as_sc_mcu7t3v3__buff_16(
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+	
+	input A,
+	output Y
+);
+
+assign Y = A;
+
+endmodule
+
 module gf180mcu_as_sc_mcu7t3v3__clkbuff_4(
 	input VPW,
 	input VNW,
@@ -475,6 +489,36 @@ module gf180mcu_as_sc_mcu7t3v3__xnor2_4(
 );
 
 assign Y = A == B;
+
+endmodule
+
+module gf180mcu_as_sc_mcu7t3v3__xor2_2(
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+
+	input A,
+	input B,
+	output Y
+);
+
+assign Y = A != B;
+
+endmodule
+
+module gf180mcu_as_sc_mcu7t3v3__xor2_4(
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+
+	input A,
+	input B,
+	output Y
+);
+
+assign Y = A != B;
 
 endmodule
 
