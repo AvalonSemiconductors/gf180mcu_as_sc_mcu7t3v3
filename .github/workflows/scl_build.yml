@@ -36,3 +36,35 @@ jobs:
         with:
           name: scl-tarball
           path: pdk/*
+  characterize_tt:
+    needs: [views]
+    runs-on: ubuntu-latest
+    name: Characterize at the typical corner
+    steps:
+      - name: Maximize build space
+        uses: AdityaGarg8/remove-unwanted-software@v5
+        with:
+          remove-dotnet: "true"
+          remove-android: "true"
+          remove-haskell: "true"
+          remove-codeql: "true"
+          remove-docker-images: "true"
+      - name: Install required packages
+        run: |
+          sudo apt-get update && sudo apt-get install ngspice
+          pip3 install git+https://codeberg.org/TholinVali/lctime
+      - name: Clone PDK
+        working-directory: ./example_project
+        run: make clone-pdk
+      - name: Setup environment variables for magic
+        run: |
+          echo "PDK_ROOT=$(pwd)/example_project/gf180mcu_pdk" >> $GITHUB_ENV
+          echo "PDK=gf180mcuD" >> $GITHUB_ENV
+      - name: Characterize
+        working-directory: ./pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3
+        run: make characterize_tt
+      - name: Upload lib artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lib-tt
+          path: lib/gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30.lib
