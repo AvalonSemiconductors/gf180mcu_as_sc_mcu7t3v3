@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e -pipefail
+set -e
 
 slew_times="$slew_times" $corner
 corner=ss
