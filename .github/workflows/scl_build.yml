@@ -32,7 +32,7 @@ jobs:
           sudo tree /nix/store/*-librelane || true
       - name: Generate views
         working-directory: ./pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3
-        run: make views
+        run: nix develop --command make views
       - name: Tarball SCL
         run: |
           tar -cf /tmp/scl.tar -C . .
