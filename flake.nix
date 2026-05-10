@@ -55,26 +55,24 @@
               gnumake
               gnugrep
               gawk
-
-              # Simulation
-              iverilog
-              verilator
-
-              # Waveform viewing
-              gtkwave
-              surfer
+              gcc-unwrapped
             ];
 
             extra-python-packages =
               ps: with ps; [
-                # Verification
-                cocotb
-
                 # For KLayout Python DRC runner
                 docopt
-
-                # For logo generation
+                
+                # For characterization
                 pillow
+                numpy
+                sympy
+                networkx
+                scipy
+                klayout
+                liberty-parser
+                joblib
+                setuptools
               ];
           });
         }
