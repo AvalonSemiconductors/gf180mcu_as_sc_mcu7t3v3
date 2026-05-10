@@ -54,6 +54,7 @@ jobs:
           sudo apt-get update && sudo apt-get install ngspice
           pip3 install git+https://codeberg.org/TholinVali/lctime
       - uses: actions/checkout@v4
+      - uses: ./.github/actions/build_magic
       - name: Clone PDK
         working-directory: ./example_project
         run: make clone-pdk
