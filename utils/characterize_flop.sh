@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -e pipefail
 
 echo "extract all;ext2sim labels on;ext2sim;extresist tolerance 10;extresist;ext2spice lvs;ext2spice cthresh 0;ext2spice extresist on;ext2spice;" | magic -dnull -noconsole $1.mag
 rm $1.ext
