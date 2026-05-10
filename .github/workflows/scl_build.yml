@@ -30,6 +30,11 @@ jobs:
         run: |
           sudo du -hs /nix/store/* | sort -h | tail -n 10
           sudo tree /nix/store/*-librelane || true
+      - name: Clone PDK
+        working-directory: ./example_project
+        run: make clone-pdk
+      - name: Setup environment variables for magic
+        run: echo "PDK_ROOT=$(PWD)/gf180mcu_pdk" >> $GITHUB_ENV
       - name: Generate views
         working-directory: ./pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3
         run: nix develop --command make views

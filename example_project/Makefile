@@ -17,9 +17,11 @@ magic:
 	# Magic also lags until DRC is complete. Or you can click the "DRC" checkbox on the top bar to turn it off.
 	magic -d OGL runs/latest/final/mag/user_project_example.mag
 
-setup:
+clone-pdk:
 	rm -rf gf180mcu_pdk
-	git clone https://github.com/wafer-space/gf180mcu.git gf180mcu_pdk --depth 1 --branch 1.1.2
+	git clone https://github.com/wafer-space/gf180mcu.git gf180mcu_pdk --depth 1
+
+setup:
 	cp -r ../pdk/libs.* gf180mcu_pdk/gf180mcuD
 
-.PHONY: project
+.PHONY: setup project
