@@ -8,7 +8,7 @@ characterize_tt:
 	cp mag/*.mag characterize/
 	cp ../../../utils/*.sh characterize/
 	cp lib/lctime_templates/template_tt.lib characterize/template.lib
-	source venv/bin/activate && cd characterize && sh characterize_tt.sh
+	cd characterize && sh characterize_tt.sh
 	cp characterize/merged.lib lib/gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30.lib
 	rm -rf characterize
 
@@ -17,7 +17,7 @@ characterize_ff:
 	cp mag/*.mag characterize/
 	cp ../../../utils/*.sh characterize/
 	cp lib/lctime_templates/template_ff.lib characterize/template.lib
-	source venv/bin/activate && cd characterize && sh characterize_ff.sh
+	cd characterize && sh characterize_ff.sh
 	cp characterize/merged.lib lib/gf180mcu_as_sc_mcu7t3v3__ff_n40C_3v60.lib
 	rm -rf characterize
 
@@ -26,6 +26,6 @@ characterize_ss:
 	cp mag/*.mag characterize/
 	cp ../../../utils/*.sh characterize/
 	cp lib/lctime_templates/template_ss.lib characterize/template.lib
-	source venv/bin/activate && cd characterize && sh characterize_ss.sh
+	cd characterize && sh characterize_ss.sh
 	cp characterize/merged.lib lib/gf180mcu_as_sc_mcu7t3v3__ss_125C_3v00.lib
 	rm -rf characterize
