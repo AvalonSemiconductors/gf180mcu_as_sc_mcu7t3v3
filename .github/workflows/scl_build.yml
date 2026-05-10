@@ -15,21 +15,9 @@ jobs:
           remove-haskell: "true"
           remove-codeql: "true"
           remove-docker-images: "true"
+      - name: Install required packages
+        run: sudo apt-get install -y magic klayout
       - uses: actions/checkout@v4
-      - name: Setup Nix
-        uses: ./.github/actions/setup_nix
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          nix_cache_domain: ${{ vars.NIX_CACHE }}
-          nix_public_key: ${{ vars.NIX_PUBLIC_KEY }}
-      - name: Build with Nix
-        uses: ./.github/actions/build_nix
-        with:
-          nix_system: x86_64-linux
-      - name: Check Nix
-        run: |
-          sudo du -hs /nix/store/* | sort -h | tail -n 10
-          sudo tree /nix/store/*-librelane || true
       - name: Clone PDK
         working-directory: ./example_project
         run: make clone-pdk
@@ -39,7 +27,7 @@ jobs:
           echo "PDK=gf180mcuD" >> $GITHUB_ENV
       - name: Generate views
         working-directory: ./pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3
-        run: nix develop --command make views
+        run: make views
       - name: Upload SCL artifact
         uses: actions/upload-artifact@v4
         with:
