@@ -55,7 +55,6 @@
               gnumake
               gnugrep
               gawk
-              gcc-unwrapped
             ];
 
             extra-python-packages =
@@ -72,7 +71,6 @@
                 klayout
                 liberty-parser
                 joblib
-                setuptools
               ];
           });
         }
