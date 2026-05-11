@@ -181,7 +181,7 @@ jobs:
           path: scl/*
       - name: Generate changelog
         id: changelog
-        uses: conventional-changelog/conventional-changelog-action@v4
+        uses: TriPSs/conventional-changelog-action@v5
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           output-file: false
