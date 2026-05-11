@@ -179,3 +179,26 @@ jobs:
         with:
           name: scl-release
           path: scl/*
+      - name: Generate changelog
+        id: changelog
+        uses: conventional-changelog/conventional-changelog-action@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          output-file: false
+          skip-version-file: true
+          skip-commit: true
+      - name: Create release archive
+        run: tar -czvf scl-release.tar.gz -C scl/* .
+      - name: Generate checksums
+        run: sha256sum scl-release.tar.gz > checksums.txt
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Release ${{ github.ref_name }}
+          body: ${{ steps.changelog.outputs.changelog }}
+          draft: false
+          files: |
+            scl-release.tar.gz
+            checksums.txt
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
