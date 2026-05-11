@@ -158,13 +158,13 @@ echo buff_4
 ./characterize.sh gf180mcu_as_sc_mcu7t3v3__buff_4 "0.0005, 0.003, 0.016, 0.068, 0.14, 0.71, 1.55" "$slew_times" $corner
 
 echo buff_8
-./characterize.sh gf180mcu_as_sc_mcu7t3v3__buff_8 "0.0005, 0.0023, 0.011, 0.05, 0.23, 1.1, 5.0" "0.01, 0.029, 0.08, 0.22, 0.621, 1.77, 5.0"
+./characterize.sh gf180mcu_as_sc_mcu7t3v3__buff_8 "0.0005, 0.0023, 0.011, 0.05, 0.23, 1.1, 5.0" "0.01, 0.029, 0.08, 0.22, 0.621, 1.77, 5.0" $corner
 
 echo buff_12
-./characterize.sh gf180mcu_as_sc_mcu7t3v3__buff_12 "0.0005, 0.0023, 0.011, 0.05, 0.23, 1.1, 5.0" "0.01, 0.029, 0.08, 0.22, 0.621, 1.77, 5.0"
+./characterize.sh gf180mcu_as_sc_mcu7t3v3__buff_12 "0.0005, 0.0023, 0.011, 0.05, 0.23, 1.1, 5.0" "0.01, 0.029, 0.08, 0.22, 0.621, 1.77, 5.0" $corner
 
 echo buff_16
-./characterize.sh gf180mcu_as_sc_mcu7t3v3__buff_16 "0.0005, 0.0023, 0.011, 0.05, 0.23, 1.1, 5.0" "0.01, 0.029, 0.08, 0.22, 0.621, 1.77, 5.0"
+./characterize.sh gf180mcu_as_sc_mcu7t3v3__buff_16 "0.0005, 0.0023, 0.011, 0.05, 0.23, 1.1, 5.0" "0.01, 0.029, 0.08, 0.22, 0.621, 1.77, 5.0" $corner
 
 echo clkbuff_4
 ./characterize.sh gf180mcu_as_sc_mcu7t3v3__clkbuff_4 "0.0005, 0.003, 0.016, 0.068, 0.14, 0.71, 1.55" "$slew_times" $corner
@@ -173,16 +173,16 @@ echo clkbuff_8
 ./characterize.sh gf180mcu_as_sc_mcu7t3v3__clkbuff_8 "0.0005, 0.0036, 0.019, 0.07, 0.202, 1.1, 2.45" "$slew_times" $corner
 
 echo clkbuff_12
-./characterize.sh gf180mcu_as_sc_mcu7t3v3__clkbuff_12 "0.0005, 0.0023, 0.011, 0.05, 0.23, 1.1, 5.0" "0.01, 0.029, 0.08, 0.22, 0.621, 1.77, 5.0"
+./characterize.sh gf180mcu_as_sc_mcu7t3v3__clkbuff_12 "0.0005, 0.0023, 0.011, 0.05, 0.23, 1.1, 5.0" "0.01, 0.029, 0.08, 0.22, 0.621, 1.77, 5.0" $corner
 
 echo dfxtp_2
-./characterize_flop.sh gf180mcu_as_sc_mcu7t3v3__dfxtp_2 "0.0005, 0.00186, 0.006, 0.019, 0.0621, 0.2, 0.775" "0.01, 0.02, 0.04, 0.09, 0.2, 0.45, 1.0" "0.01, 0.5, 1.0"
+./characterize_flop.sh gf180mcu_as_sc_mcu7t3v3__dfxtp_2 "0.0005, 0.00186, 0.006, 0.019, 0.0621, 0.2, 0.775" "0.01, 0.02, 0.04, 0.09, 0.2, 0.45, 1.0" "0.01, 0.5, 1.0" $corner
 
 echo dfxtp_4
-./characterize_flop.sh gf180mcu_as_sc_mcu7t3v3__dfxtp_4 "0.0005, 0.0023456789, 0.009, 0.033, 0.11, 0.42, 1.54" "0.01, 0.02, 0.04, 0.09, 0.2, 0.45, 1.0" "0.01, 0.5, 1.0"
+./characterize_flop.sh gf180mcu_as_sc_mcu7t3v3__dfxtp_4 "0.0005, 0.0023456789, 0.009, 0.033, 0.11, 0.42, 1.54" "0.01, 0.02, 0.04, 0.09, 0.2, 0.45, 1.0" "0.01, 0.5, 1.0" $corner
 
 echo dfxtn_2
-./characterize_flop.sh gf180mcu_as_sc_mcu7t3v3__dfxtn_2 "0.0005, 0.00186, 0.006, 0.019, 0.0621, 0.2, 0.775" "0.01, 0.02, 0.04, 0.09, 0.2, 0.45, 1.0" "0.01, 0.5, 1.0"
+./characterize_flop.sh gf180mcu_as_sc_mcu7t3v3__dfxtn_2 "0.0005, 0.00186, 0.006, 0.019, 0.0621, 0.2, 0.775" "0.01, 0.02, 0.04, 0.09, 0.2, 0.45, 1.0" "0.01, 0.5, 1.0" $corner
 
 echo dfsrtp_2
-./characterize_flop.sh gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 "0.0005, 0.00186, 0.006, 0.019, 0.0621, 0.2, 0.775" "0.01, 0.02, 0.04, 0.09, 0.2, 0.45, 1.0" "0.01, 0.5, 1.0"
+./characterize_flop.sh gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 "0.0005, 0.00186, 0.006, 0.019, 0.0621, 0.2, 0.775" "0.01, 0.02, 0.04, 0.09, 0.2, 0.45, 1.0" "0.01, 0.5, 1.0" $corner
