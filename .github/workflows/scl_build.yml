@@ -172,7 +172,7 @@ jobs:
           name: lib-ff
           path: scl/libs.ref/gf180mcu_as_sc_mcu7t3v3/lib/
       - name: Remove unneeded files
-        working-directory: ./pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3
+        working-directory: ./scl/libs.ref/gf180mcu_as_sc_mcu7t3v3
         run: rm automated.magicrc *.sh *.py *.java Makefile
       - name: Upload final build artifact
         uses: actions/upload-artifact@v4
