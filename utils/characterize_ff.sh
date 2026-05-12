@@ -186,3 +186,5 @@ echo dfxtn_2
 
 echo dfsrtp_2
 ./characterize_flop.sh gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 "0.0005, 0.00186, 0.006, 0.019, 0.0621, 0.2, 0.775" "0.01, 0.02, 0.04, 0.09, 0.2, 0.45, 1.0" "0.01, 0.5, 1.0" $corner
+
+sed -i 's/"(IQ)"/"IQ"/g' *.lib
