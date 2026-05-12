@@ -19,7 +19,7 @@ jobs:
         run: |
           sudo apt-get update && sudo apt-get install -y klayout
           pip3 install klayout
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/build_magic
       - name: Clone PDK
         working-directory: ./example_project
@@ -32,7 +32,7 @@ jobs:
         working-directory: ./pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3
         run: make views
       - name: Upload SCL artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: views
           path: pdk/*
@@ -53,7 +53,7 @@ jobs:
         run: |
           sudo apt-get update && sudo apt-get install ngspice
           pip3 install git+https://codeberg.org/TholinVali/lctime
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/build_magic
       - name: Clone PDK
         working-directory: ./example_project
@@ -66,7 +66,7 @@ jobs:
         working-directory: ./pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3
         run: make characterize_ff
       - name: Upload lib artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: lib-ff
           path: pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3/lib/gf180mcu_as_sc_mcu7t3v3__ff_n40C_3v60.lib
@@ -87,7 +87,7 @@ jobs:
         run: |
           sudo apt-get update && sudo apt-get install ngspice
           pip3 install git+https://codeberg.org/TholinVali/lctime
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/build_magic
       - name: Clone PDK
         working-directory: ./example_project
@@ -100,7 +100,7 @@ jobs:
         working-directory: ./pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3
         run: make characterize_tt
       - name: Upload lib artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: lib-tt
           path: pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3/lib/gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30.lib
@@ -121,7 +121,7 @@ jobs:
         run: |
           sudo apt-get update && sudo apt-get install ngspice
           pip3 install git+https://codeberg.org/TholinVali/lctime
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/build_magic
       - name: Clone PDK
         working-directory: ./example_project
@@ -134,7 +134,7 @@ jobs:
         working-directory: ./pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3
         run: make characterize_ss
       - name: Upload lib artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: lib-ss
           path: pdk/libs.ref/gf180mcu_as_sc_mcu7t3v3/lib/gf180mcu_as_sc_mcu7t3v3__ss_125C_3v00.lib
@@ -151,24 +151,24 @@ jobs:
           remove-haskell: "true"
           remove-codeql: "true"
           remove-docker-images: "true"
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Create output directory
         run: mkdir scl
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: views
           path: scl
       - name: Remove old lib files
         run: rm -rf scl/libs.ref/gf180mcu_as_sc_mcu7t3v3/lib/*
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: lib-tt
           path: scl/libs.ref/gf180mcu_as_sc_mcu7t3v3/lib/
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: lib-ss
           path: scl/libs.ref/gf180mcu_as_sc_mcu7t3v3/lib/
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: lib-ff
           path: scl/libs.ref/gf180mcu_as_sc_mcu7t3v3/lib/
@@ -176,13 +176,13 @@ jobs:
         working-directory: ./scl/libs.ref/gf180mcu_as_sc_mcu7t3v3
         run: rm automated.magicrc *.sh *.py *.java Makefile
       - name: Upload final build artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: scl-release
           path: scl/*
       - name: Generate changelog
         id: changelog
-        uses: TriPSs/conventional-changelog-action@v5
+        uses: TriPSs/conventional-changelog-action@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           output-file: false
@@ -193,7 +193,7 @@ jobs:
       - name: Generate checksums
         run: sha256sum scl-release.tar.gz > checksums.txt
       - name: Create Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           name: Release ${{ github.ref_name }}
           body: ${{ steps.changelog.outputs.changelog }}

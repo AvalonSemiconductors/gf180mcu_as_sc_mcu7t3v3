@@ -4392,6 +4392,72 @@ VERSION 5.7 ;
   NOWIREEXTENSIONATPIN ON ;
   DIVIDERCHAR "/" ;
   BUSBITCHARS "[]" ;
+MACRO gf180mcu_as_sc_mcu7t3v3__hcf_7
+  CLASS CORE ;
+  FOREIGN gf180mcu_as_sc_mcu7t3v3__hcf_7 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 6.720 BY 3.920 ;
+  SYMMETRY X Y ;
+  SITE unithd ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.620 6.720 4.220 ;
+        RECT 1.005 0.895 1.385 3.620 ;
+        RECT 1.790 3.080 2.020 3.620 ;
+        RECT 2.460 0.895 2.980 3.620 ;
+        RECT 4.060 0.895 4.580 3.620 ;
+        RECT 5.660 0.895 6.180 3.620 ;
+    END
+  END VDD
+  PIN VNW
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Nwell ;
+        RECT -0.430 1.770 7.150 4.350 ;
+    END
+  END VNW
+  PIN VPW
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Pwell ;
+        RECT -0.430 -0.430 7.150 1.770 ;
+    END
+  END VPW
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.205 0.300 0.580 0.840 ;
+        RECT 1.660 0.300 2.180 1.360 ;
+        RECT 3.260 0.300 3.780 1.360 ;
+        RECT 4.860 0.300 5.380 1.360 ;
+        RECT 0.000 -0.300 6.720 0.300 ;
+    END
+  END VSS
+  PIN HCF
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 1.960000 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.395 1.565 0.775 2.215 ;
+    END
+  END HCF
+END gf180mcu_as_sc_mcu7t3v3__hcf_7
+
+
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
 MACRO gf180mcu_as_sc_mcu7t3v3__inv_2
   CLASS CORE ;
   FOREIGN gf180mcu_as_sc_mcu7t3v3__inv_2 ;

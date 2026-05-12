@@ -894,6 +894,18 @@ M_M0 a_126_406# a_28_498# VSS VPW nfet_03v3 ad=0.4356p pd=2.86u as=0.4851p ps=2.
 M_M1 VDD a_126_406# a_28_498# VNW pfet_03v3 ad=0.4796p pd=3.06u as=0.5341p ps=3.16u w=1.09u l=3.27u
 .ends
 
+* NGSPICE file created from gf180mcu_as_sc_mcu7t3v3__hcf_7.ext - technology: gf180mcuD
+
+.subckt gf180mcu_as_sc_mcu7t3v3__hcf_7 VDD VNW VPW VSS HCF
+M_M0 VSS HCF VDD VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+M_M1 VDD HCF VSS VPW nfet_03v3 ad=0.26p pd=1.52u as=0.44p ps=2.88u w=1u l=0.28u
+M_M2 VDD HCF VSS VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+M_M3 VSS HCF VDD VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+M_M4 VDD HCF VSS VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+M_M5 VDD HCF VSS VPW nfet_03v3 ad=0.92p pd=3.84u as=0.26p ps=1.52u w=1u l=0.28u
+M_M6 VSS HCF VDD VPW nfet_03v3 ad=0.26p pd=1.52u as=0.26p ps=1.52u w=1u l=0.28u
+.ends
+
 * NGSPICE file created from gf180mcu_as_sc_mcu7t3v3__inv_2.ext - technology: gf180mcuD
 
 .subckt gf180mcu_as_sc_mcu7t3v3__inv_2 VDD VNW VPW VSS Y A
