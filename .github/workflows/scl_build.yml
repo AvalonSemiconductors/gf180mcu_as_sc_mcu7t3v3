@@ -189,7 +189,7 @@ jobs:
           skip-version-file: true
           skip-commit: true
       - name: Create release archive
-        run: tar -czvf scl-release.tar.gz -C scl/* .
+        run: tar -czvf scl-release.tar.gz -C scl/ .
       - name: Generate checksums
         run: sha256sum scl-release.tar.gz > checksums.txt
       - name: Create Release
