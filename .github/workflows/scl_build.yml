@@ -151,6 +151,7 @@ jobs:
           remove-haskell: "true"
           remove-codeql: "true"
           remove-docker-images: "true"
+      - uses: actions/checkout@v4
       - name: Create output directory
         run: mkdir scl
       - uses: actions/download-artifact@v4
