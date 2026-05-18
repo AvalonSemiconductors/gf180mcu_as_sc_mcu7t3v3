@@ -9,7 +9,7 @@ meta:
 # DO CHANGE
 DESIGN_NAME: user_project_example
 VERILOG_FILES: ["dir::src/user_project_example.v", "dir::src/tholin_riscv.v", "dir::src/uart.v", "dir::src/spi.v"]
-CLOCK_PERIOD: 28
+CLOCK_PERIOD: 26
 DIE_AREA: [0, 0, 2200, 2200]
 DESIGN_REPAIR_TIE_FANOUT: true
 DIODE_ON_PORTS: both
