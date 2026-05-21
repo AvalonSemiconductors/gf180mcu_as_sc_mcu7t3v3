@@ -2804,7 +2804,7 @@ MACRO gf180mcu_as_sc_mcu7t3v3__buff_2
     ANTENNAGATEAREA 0.666400 ;
     PORT
       LAYER Metal1 ;
-        RECT 0.205 1.570 0.675 2.285 ;
+        RECT 0.285 1.570 0.755 2.285 ;
     END
   END A
   PIN Y
@@ -2886,7 +2886,7 @@ MACRO gf180mcu_as_sc_mcu7t3v3__buff_4
     ANTENNAGATEAREA 0.666400 ;
     PORT
       LAYER Metal1 ;
-        RECT 0.205 1.570 0.675 2.285 ;
+        RECT 0.285 1.570 0.755 2.285 ;
     END
   END A
   PIN Y
@@ -2978,9 +2978,9 @@ MACRO gf180mcu_as_sc_mcu7t3v3__buff_8
     ANTENNAGATEAREA 1.999200 ;
     PORT
       LAYER Metal1 ;
-        RECT 0.205 2.060 0.585 2.405 ;
-        RECT 0.205 1.610 0.770 2.060 ;
-        RECT 0.205 1.455 0.585 1.610 ;
+        RECT 0.285 2.060 0.665 2.405 ;
+        RECT 0.285 1.610 0.770 2.060 ;
+        RECT 0.285 1.455 0.665 1.610 ;
     END
   END A
   PIN Y
