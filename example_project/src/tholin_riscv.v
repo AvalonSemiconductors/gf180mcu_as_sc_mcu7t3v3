@@ -67,15 +67,23 @@ localparam MUL = 8;
 localparam DIV1 = 9;
 localparam DIV2 = 10;
 
+reg last_le_lo;
+reg last_le_hi;
+
+wire WEb = !((cycle == MEM3 || cycle == MEM5) && is_write);
 wire le_lo_pre = cycle == MEM1 || cycle == MEM4;
-assign le_lo = le_lo_pre && clk;
+assign le_lo = le_lo_pre && !last_le_lo && rst_n;
 wire le_hi_pre = cycle == MEM2;
-assign le_hi = le_hi_pre && clk;
+assign le_hi = le_hi_pre && !last_le_hi && rst_n;
 assign bus_dir = !(le_lo_pre || le_hi_pre || (!WEb));
 assign OEb = !((cycle == MEM3 || cycle == MEM5) && !is_write);
-wire WEb = !((cycle == MEM3 || cycle == MEM5) && is_write);
 assign WEb_lo = !(io_size != 0 || requested_addr[0] == 0) || WEb;
 assign WEb_hi = !(io_size != 0 || requested_addr[0] == 1) || WEb;
+
+always @(negedge clk) begin
+    last_le_lo <= le_lo;
+    last_le_hi <= le_hi;
+end
 
 reg [15:0] bus_out_c;
 always @(*) begin
@@ -126,22 +134,10 @@ wire LOAD_sign = load_funct & (io_size == 0 ? mem_io[7] : mem_io[15]);
 
 wire [31:0] rs1 = regs[rs1Id];
 wire [31:0] rs2 = regs[rs2Id];
-reg should_branch;
-always @(*) begin
-    case(funct3)
-        0: should_branch = EQ;
-        1: should_branch = !EQ;
-        4: should_branch = LTS;
-        5: should_branch = !LTS;
-        6: should_branch = LT;
-        7: should_branch = !LT;
-        default: should_branch = 1'b0;
-    endcase
-end
 
-wire [31:0] plus = aluIn2 + aluIn1;
 wire [31:0] aluIn1 = isJAL ? PC : rs1;
 wire [31:0] aluIn2 = isStore ? Simm : (isALUreg || isBranch ? rs2 : Iimm);
+wire [31:0] plus = aluIn2 + aluIn1;
 wire [31:0] XOR = aluIn1 ^ aluIn2;
 wire EQ = XOR == 0;
 wire [32:0] minus = {1'b1, ~aluIn2} + {1'b0, aluIn1} + 33'b1;
@@ -205,6 +201,19 @@ always @(*) begin
     endcase
 end
 
+reg should_branch;
+always @(*) begin
+    case(funct3)
+        0: should_branch = EQ;
+        1: should_branch = !EQ;
+        4: should_branch = LTS;
+        5: should_branch = !LTS;
+        6: should_branch = LT;
+        7: should_branch = !LT;
+        default: should_branch = 1'b0;
+    endcase
+end
+
 `ifdef SIM
 reg [31:0] instr_l;
 `endif
@@ -223,6 +232,15 @@ wire [31:0] a0 = regs[10];
 wire [31:0] a1 = regs[11];
 `endif
 
+reg [7:0] spi_div;
+wire [7:0] spi_dout;
+wire spi_busy;
+reg [15:0] uart_div;
+wire [7:0] uart_dout;
+wire uart_busy;
+wire uart_hb;
+
+int i;
 reg mul_delay;
 wire [31:0] PC_next = PC + 4;
 wire [31:0] PC_jmp = PC + (isJAL ? Jimm : Bimm);
@@ -250,7 +268,6 @@ always @(posedge clk) begin
         tmr1_top <= 32'hFFFFFFFF;
         tmr0_pre_ctr <= 0;
         tmr1_pre_ctr <= 0;
-        regs[1] <= 0;
         div_shifter <= 0;
         div_res <= 0;
         div_counter <= 0;
@@ -260,6 +277,11 @@ always @(posedge clk) begin
         mem_io <= 0;
         io_size <= 0;
         ret_cycle <= 0;
+        mul_delay <= 0;
+        load_dest <= 0;
+        load_funct <= 0;
+        PCE <= 0;
+        for(i = 0; i < 32; i=i+1) regs[i] <= 0;
     end else begin
         last_io_state <= PORT_in[5];
         if(!last_io_state && PORT_in[5] && io_int_enable) irqs[0] <= 1;
@@ -483,9 +505,6 @@ always @(posedge clk) begin
     end
 end
 
-reg [7:0] spi_div;
-wire [7:0] spi_dout;
-wire spi_busy;
 qcpu_spi spi(
     .divisor(spi_div),
     .din(mem_io[7:0]),
@@ -499,10 +518,6 @@ qcpu_spi spi(
     .rst(!rst_n)
 );
 
-reg [15:0] uart_div;
-wire [7:0] uart_dout;
-wire uart_busy;
-wire uart_hb;
 qcpu_uart uart(
     .divisor(uart_div),
     .din(mem_io[7:0]),

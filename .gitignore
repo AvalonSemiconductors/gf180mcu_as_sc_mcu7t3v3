@@ -1,3 +1,6 @@
 docs/venv/
 example_project/gf180mcu_pdk/
 example_project/runs/
+example_project/sim/__pycache__/
+example_project/sim/sim_build/
+example_project/sim/results.xml

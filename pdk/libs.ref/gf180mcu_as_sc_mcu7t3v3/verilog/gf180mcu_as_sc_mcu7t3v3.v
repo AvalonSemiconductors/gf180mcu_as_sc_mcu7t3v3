@@ -1,3 +1,37 @@
+module gf180mcu_as_sc_mcu7t3v3__dlxfp_2(
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+	
+	input ENA,
+	input D,
+	output Q
+);
+
+reg state;
+always @(posedge ENA) state <= D;
+assign Q = ENA ? !D : !state;
+
+endmodule
+
+module gf180mcu_as_sc_mcu7t3v3__dlxfn_2(
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+	
+	input ENA,
+	input D,
+	output Q
+);
+
+reg state;
+always @(negedge ENA) state <= D;
+assign Q = ENA ? !state : !D;
+
+endmodule
+
 module gf180mcu_as_sc_mcu7t3v3__dfxtp_2(
 	input VPW,
 	input VNW,
@@ -53,14 +87,16 @@ assign sr = ~(RN & SN);
 always @(posedge CLK or posedge sr) begin
 	if (sr == 1'b1) begin
 	if (RN == 1'b0) begin
-		Q <= 1'b0;
+		state <= 1'b0;
 	end else if (SN == 1'b0) begin
-		Q <= 1'b1;
+		state <= 1'b1;
 	end
 	end else begin
-		Q <= state;
+		state <= D;
 	end
 end
+
+assign Q = state;
 
 endmodule
 
@@ -825,7 +861,7 @@ module gf180mcu_as_sc_mcu7t3v3__aoi211_2 (
 	output Y
 );
 
-assign Y = ~(C | D | (A & B));
+assign Y = ~((A & B) | C | D);
 
 endmodule
 
@@ -842,7 +878,7 @@ module gf180mcu_as_sc_mcu7t3v3__aoi211_4 (
 	output Y
 );
 
-assign Y = ~(C | D | (A & B));
+assign Y = ~((A & B) | C | D);
 
 endmodule
 
@@ -859,7 +895,7 @@ module gf180mcu_as_sc_mcu7t3v3__ao211_2 (
 	output Y
 );
 
-assign Y = C | D | (A & B);
+assign Y = (A & B) | C | D;
 
 endmodule
 
@@ -876,7 +912,7 @@ module gf180mcu_as_sc_mcu7t3v3__ao211_4 (
 	output Y
 );
 
-assign Y = C | D | (A & B);
+assign Y = (A & B) | C | D;
 
 endmodule
 
@@ -927,7 +963,7 @@ module gf180mcu_as_sc_mcu7t3v3__oai211_2 (
 	output Y
 );
 
-assign Y = ~(C & D & (A | B));
+assign Y = ~((A | B) & C & D);
 
 endmodule
 
