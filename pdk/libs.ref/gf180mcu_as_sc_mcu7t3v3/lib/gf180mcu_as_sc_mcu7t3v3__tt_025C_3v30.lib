@@ -2726,7 +2726,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "((!A + !B))";
+      function : "((!A | !B))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -2994,7 +2994,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "((!A + !B))";
+      function : "((!A | !B))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -3262,7 +3262,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "((A + !B))";
+      function : "((A | !B))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -3530,7 +3530,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "((A + !B))";
+      function : "((A | !B))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -3807,7 +3807,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "((!A + !B + !C))";
+      function : "((!A | !B | !C))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -4202,7 +4202,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "((!A + !B + !C + !D))";
+      function : "((!A | !B | !C | !D))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -6682,7 +6682,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "((A + B))";
+      function : "((A | B))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -7250,7 +7250,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "((A + B))";
+      function : "((A | B))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -7518,7 +7518,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "(((A & B) + (!A & !B)))";
+      function : "(((A & B) | (!A & !B)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -7930,7 +7930,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "(((A & B) + (!A & !B)))";
+      function : "(((A & B) | (!A & !B)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -8342,7 +8342,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "(((A & !B) + (B & !A)))";
+      function : "(((A & !B) | (B & !A)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -8754,7 +8754,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "(((A & !B) + (B & !A)))";
+      function : "(((A & !B) | (B & !A)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -9175,7 +9175,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "(((B & S) + (A & !S)))";
+      function : "(((B & S) | (A & !S)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -9633,7 +9633,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "(((B & S) + (A & !S)))";
+      function : "(((B & S) | (A & !S)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -10091,7 +10091,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "(((A & B) + (A & C) + (B & C)))";
+      function : "(((A & B) | (A & C) | (B & C)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -10477,7 +10477,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "(((A & B) + (A & C) + (B & C)))";
+      function : "(((A & B) | (A & C) | (B & C)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -10863,7 +10863,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "(!(C + (A & B)))";
+      function : "(!(C | (A & B)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -11249,7 +11249,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "(!(C + (A & B)))";
+      function : "(!(C | (A & B)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -11635,7 +11635,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "(!(C + (B & !A)))";
+      function : "(!(C | (B & !A)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -12021,7 +12021,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "(!(C + (B & !A)))";
+      function : "(!(C | (B & !A)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -12407,7 +12407,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "((C + (A & B)))";
+      function : "((C | (A & B)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -12793,7 +12793,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "((C + (A & B)))";
+      function : "((C | (A & B)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -13179,7 +13179,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "((C + (B & !A)))";
+      function : "((C | (B & !A)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -13565,7 +13565,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "((C + (B & !A)))";
+      function : "((C | (B & !A)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -13960,7 +13960,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "(!((A & B) + (C & D)))";
+      function : "(!((A & B) | (C & D)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -14464,7 +14464,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "(!((A & B) + (C & D)))";
+      function : "(!((A & B) | (C & D)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -14968,7 +14968,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "(((A & B) + (C & D)))";
+      function : "(((A & B) | (C & D)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -15472,7 +15472,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "(((A & B) + (C & D)))";
+      function : "(((A & B) | (C & D)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -15976,7 +15976,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "(!(D + (A & B & C)))";
+      function : "(!(D | (A & B & C)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -16480,7 +16480,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "(!(D + (A & B & C)))";
+      function : "(!(D | (A & B & C)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -16984,7 +16984,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "((D + (A & B & C)))";
+      function : "((D | (A & B & C)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -17488,7 +17488,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "((D + (A & B & C)))";
+      function : "((D | (A & B & C)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -17992,7 +17992,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "(!(C + D + (A & B)))";
+      function : "(!(C | D | (A & B)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -18496,7 +18496,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "(!(C + D + (A & B)))";
+      function : "(!(C | D | (A & B)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -19000,7 +19000,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "((C + D + (A & B)))";
+      function : "((C | D | (A & B)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -19504,7 +19504,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "((C + D + (A & B)))";
+      function : "((C | D | (A & B)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
@@ -20008,7 +20008,7 @@ library (gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30) {
     }
     pin (Y) {
       direction : output;
-      function : "(!(C & D & (A + B)))";
+      function : "(!(C & D & (A | B)))";
       max_transition : 1.5;
       related_ground_pin : VSS;
       related_power_pin : VDD;
