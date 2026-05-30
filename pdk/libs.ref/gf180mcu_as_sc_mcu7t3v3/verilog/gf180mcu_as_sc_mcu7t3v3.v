@@ -83,6 +83,7 @@ reg state;
 wire sr;
 
 assign sr = ~(RN & SN);
+assign Q = state;
 
 always @(posedge CLK or posedge sr) begin
 	if (sr == 1'b1) begin
