@@ -9,7 +9,7 @@ module gf180mcu_as_sc_mcu7t3v3__dlxfp_2(
 	output Q
 );
 
-reg state;
+reg state = $random();
 always @(posedge ENA) state <= D;
 assign Q = ENA ? !D : !state;
 
@@ -26,9 +26,43 @@ module gf180mcu_as_sc_mcu7t3v3__dlxfn_2(
 	output Q
 );
 
-reg state;
+reg state = $random();
 always @(negedge ENA) state <= D;
 assign Q = ENA ? !state : !D;
+
+endmodule
+
+module gf180mcu_as_sc_mcu7t3v3__dlxtp_2(
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+	
+	input ENA,
+	input D,
+	output Q
+);
+
+reg state = $random();
+always @(posedge ENA) state <= D;
+assign Q = ENA ? D : state;
+
+endmodule
+
+module gf180mcu_as_sc_mcu7t3v3__dlxtn_2(
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+	
+	input ENA,
+	input D,
+	output Q
+);
+
+reg state = $random();
+always @(negedge ENA) state <= D;
+assign Q = ENA ? state : D;
 
 endmodule
 
@@ -43,7 +77,24 @@ module gf180mcu_as_sc_mcu7t3v3__dfxtp_2(
 	output Q
 );
 
-reg state;
+reg state = $random();
+always @(posedge CLK) state <= D;
+assign Q = state;
+
+endmodule
+
+module gf180mcu_as_sc_mcu7t3v3__dfxtp_4(
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+	
+	input CLK,
+	input D,
+	output Q
+);
+
+reg state = $random();
 always @(posedge CLK) state <= D;
 assign Q = state;
 

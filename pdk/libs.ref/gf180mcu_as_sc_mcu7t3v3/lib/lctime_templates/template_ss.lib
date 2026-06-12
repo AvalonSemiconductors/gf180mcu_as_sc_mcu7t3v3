@@ -78,6 +78,128 @@ library(gf180mcu_as_sc_mcu7t3v3__ss_125C_3v00) {
 		index_2 ("1, 2, 3, 4, 5, 6, 7");
 	}
 	
+	cell (gf180mcu_as_sc_mcu7t3v3__dlxtp_2) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__dlxtp;
+		area : 41.708800;
+		
+		latch (IQ, IQN) {
+			data_in: "D";
+			enable : "ENA";
+		}
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin (ENA) {
+			direction : input;
+			clock : "true";
+			related_ground_pin : "VSS";
+			related_power_pin : "VDD";
+			max_transition : 1.0;
+
+		}
+		
+		pin (D) {
+			direction : input;
+			clock : "false";
+			related_ground_pin : "VSS";
+			related_power_pin : "VDD";
+			max_transition : 1.0;
+
+		}
+		
+		pin (Q) {
+			direction : output;
+			function : "IQ";
+			related_ground_pin : "VSS";
+			related_power_pin : "VDD";
+			max_transition : 1.5;
+
+		}
+	}
+	
+	cell (gf180mcu_as_sc_mcu7t3v3__dlxtn_2) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__dlxtn;
+		area : 41.708800;
+		
+		latch (IQ, IQN) {
+			data_in: "D";
+			enable : "(!ENA)";
+		}
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin (ENA) {
+			direction : input;
+			clock : "true";
+			related_ground_pin : "VSS";
+			related_power_pin : "VDD";
+			max_transition : 1.0;
+
+		}
+		
+		pin (D) {
+			direction : input;
+			clock : "false";
+			related_ground_pin : "VSS";
+			related_power_pin : "VDD";
+			max_transition : 1.0;
+
+		}
+		
+		pin (Q) {
+			direction : output;
+			function : "IQ";
+			related_ground_pin : "VSS";
+			related_power_pin : "VDD";
+			max_transition : 1.5;
+
+		}
+	}
+	
 	cell (gf180mcu_as_sc_mcu7t3v3__dlxfp_2) {
 		cell_footprint : gf180mcu_as_sc_mcu7t3v3__dlxfp;
 		area : 41.708800;
