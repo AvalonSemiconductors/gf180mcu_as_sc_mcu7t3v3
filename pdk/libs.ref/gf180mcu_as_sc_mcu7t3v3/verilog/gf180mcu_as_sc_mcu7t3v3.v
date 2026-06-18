@@ -27,7 +27,7 @@ module gf180mcu_as_sc_mcu7t3v3__dlxfn_2(
 );
 
 reg state;
-always @(ENA, D) if(ENA) state <= D;
+always @(ENA, D) if(!ENA) state <= D;
 assign Q = !state;
 
 endmodule
@@ -61,7 +61,7 @@ module gf180mcu_as_sc_mcu7t3v3__dlxtn_2(
 );
 
 reg state;
-always @(ENA, D) if(ENA) state <= D;
+always @(ENA, D) if(!ENA) state <= D;
 assign Q = state;
 
 endmodule
