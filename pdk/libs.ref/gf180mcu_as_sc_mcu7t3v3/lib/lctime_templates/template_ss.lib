@@ -4094,7 +4094,30 @@ library(gf180mcu_as_sc_mcu7t3v3__ss_125C_3v00) {
 			related_power_pin : VDD;
 		}
 	}
-	
+	cell (gf180mcu_as_sc_mcu7t3v3__tap_2) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__tap;
+		area : 4.3904;
+		pg_pin (VPW) {
+		voltage_name : VPW;
+		pg_type : pwell;
+		physical_connection : device_layer;
+		}
+		pg_pin (VNW) {
+		voltage_name : VNW;
+		pg_type : nwell;
+		physical_connection : device_layer;
+		}
+		pg_pin (VDD) {
+		voltage_name : VDD;
+		related_bias_pin : VNW;
+		pg_type : primary_power;
+		}
+		pg_pin (VSS) {
+		voltage_name : VSS;
+		related_bias_pin : VPW;
+		pg_type : primary_ground;
+		}
+	}
 	cell (gf180mcu_as_sc_mcu7t3v3__fill_1) {
 		cell_footprint : gf180mcu_as_sc_mcu7t3v3__fill;
 		area: 2.195200;
