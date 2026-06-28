@@ -1,28 +1,28 @@
 magic
 tech gf180mcuD
-magscale 1 5
+magscale 1 10
 timestamp 1751532423
 << nwell >>
-rect -43 177 99 435
+rect -86 354 198 870
 << pwell >>
-rect -43 -43 99 177
+rect -86 -86 198 354
 << metal1 >>
-rect 0 362 56 422
-rect 0 -30 56 30
+rect 0 724 112 844
+rect 0 -60 112 60
 << labels >>
-flabel metal1 s 0 362 56 422 0 FreeSans 200 0 0 0 VDD
+flabel metal1 s 0 724 112 844 0 FreeSans 200 0 0 0 VDD
 port 1 nsew power bidirectional abutment
-flabel metal1 s 0 -30 56 30 0 FreeSans 200 0 0 0 VSS
+flabel metal1 s 0 -60 112 60 0 FreeSans 200 0 0 0 VSS
 port 4 nsew ground bidirectional abutment
-flabel nwell s 5 367 55 417 0 FreeSans 200 0 0 0 VNW
+flabel nwell s 5 734 112 834 0 FreeSans 200 0 0 0 VNW
 port 2 nsew power bidirectional
-flabel pwell s 5 -25 55 25 0 FreeSans 200 0 0 0 VPW
+flabel pwell s 5 -50 112 50 0 FreeSans 200 0 0 0 VPW
 port 3 nsew ground bidirectional
 << properties >>
-string FIXED_BBOX 0 0 56 392
+string FIXED_BBOX 0 0 112 784
 string LEFclass CORE SPACER
 string LEFsite unithd
 string LEFsymmetry X Y
-string MASKHINTS_NPLUS -8 -23 64 177
-string MASKHINTS_PPLUS -8 177 64 415
+string MASKHINTS_NPLUS -16 -46 128 354
+string MASKHINTS_PPLUS -16 354 128 830
 << end >>

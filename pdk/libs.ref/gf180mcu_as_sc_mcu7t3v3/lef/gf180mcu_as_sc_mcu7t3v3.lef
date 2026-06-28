@@ -4702,6 +4702,140 @@ VERSION 5.7 ;
   NOWIREEXTENSIONATPIN ON ;
   DIVIDERCHAR "/" ;
   BUSBITCHARS "[]" ;
+MACRO gf180mcu_as_sc_mcu7t3v3__dyn_dfxtp_2
+  CLASS CORE ;
+  FOREIGN gf180mcu_as_sc_mcu7t3v3__dyn_dfxtp_2 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 11.200 BY 3.920 ;
+  SYMMETRY X Y ;
+  SITE unithd ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.620 11.200 4.220 ;
+        RECT 1.005 3.230 1.235 3.620 ;
+        RECT 3.245 3.230 3.475 3.620 ;
+        RECT 5.980 3.230 6.210 3.620 ;
+        RECT 8.655 2.210 8.885 3.620 ;
+        RECT 10.255 2.130 10.485 3.620 ;
+    END
+  END VDD
+  PIN VNW
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Nwell ;
+        RECT -0.430 1.770 11.630 4.350 ;
+    END
+  END VNW
+  PIN VPW
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Pwell ;
+        RECT -0.430 -0.430 11.630 1.770 ;
+    END
+  END VPW
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 1.005 0.300 1.235 0.690 ;
+        RECT 3.245 0.300 3.475 0.690 ;
+        RECT 5.980 0.300 6.210 0.690 ;
+        RECT 8.655 0.300 8.885 0.690 ;
+        RECT 10.255 0.300 10.485 1.395 ;
+        RECT 0.000 -0.300 11.200 0.300 ;
+    END
+  END VSS
+  PIN CLK
+    DIRECTION INPUT ;
+    USE CLOCK ;
+    ANTENNAGATEAREA 0.666400 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.175 1.540 0.800 1.945 ;
+    END
+  END CLK
+  PIN D
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.666400 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 2.905 1.555 3.310 2.590 ;
+    END
+  END D
+  PIN Q
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 1.237600 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 9.425 0.990 9.835 3.390 ;
+    END
+  END Q
+  OBS
+      LAYER Metal1 ;
+        RECT 1.790 2.875 2.050 3.255 ;
+        RECT 0.205 2.820 0.435 2.875 ;
+        RECT 0.205 2.590 1.365 2.820 ;
+        RECT 0.205 2.535 0.435 2.590 ;
+        RECT 1.130 1.945 1.365 2.590 ;
+        RECT 1.805 2.495 2.035 2.875 ;
+        RECT 1.750 2.265 2.090 2.495 ;
+        RECT 1.100 1.540 1.395 1.945 ;
+        RECT 1.130 1.305 1.365 1.540 ;
+        RECT 0.205 1.225 0.435 1.280 ;
+        RECT 1.050 1.225 1.435 1.305 ;
+        RECT 0.205 0.995 1.435 1.225 ;
+        RECT 0.205 0.895 0.435 0.995 ;
+        RECT 1.050 0.985 1.435 0.995 ;
+        RECT 1.805 0.990 2.035 2.265 ;
+        RECT 2.445 1.150 2.675 2.550 ;
+        RECT 3.665 1.150 3.895 1.990 ;
+        RECT 4.265 1.950 4.495 2.075 ;
+        RECT 4.865 1.960 5.095 2.075 ;
+        RECT 5.340 2.010 5.570 3.390 ;
+        RECT 4.250 1.570 4.510 1.950 ;
+        RECT 4.850 1.580 5.110 1.960 ;
+        RECT 4.265 1.445 4.495 1.570 ;
+        RECT 4.865 1.445 5.095 1.580 ;
+        RECT 5.340 1.575 6.100 2.010 ;
+        RECT 6.940 1.975 7.170 2.075 ;
+        RECT 6.925 1.595 7.185 1.975 ;
+        RECT 7.540 1.960 7.770 2.075 ;
+        RECT 8.015 1.980 8.245 3.390 ;
+        RECT 2.445 0.920 3.895 1.150 ;
+        RECT 5.340 0.990 5.570 1.575 ;
+        RECT 6.940 1.445 7.170 1.595 ;
+        RECT 7.525 1.580 7.785 1.960 ;
+        RECT 7.540 1.445 7.770 1.580 ;
+        RECT 8.015 1.545 8.800 1.980 ;
+        RECT 8.015 0.990 8.245 1.545 ;
+      LAYER Metal2 ;
+        RECT 1.730 2.925 4.520 3.205 ;
+        RECT 4.240 2.665 4.520 2.925 ;
+        RECT 4.240 2.385 7.795 2.665 ;
+        RECT 4.240 1.445 4.520 2.385 ;
+        RECT 1.105 0.970 1.385 1.305 ;
+        RECT 4.840 0.970 5.120 1.960 ;
+        RECT 6.915 0.970 7.195 1.975 ;
+        RECT 7.515 1.580 7.795 2.385 ;
+        RECT 1.105 0.690 7.195 0.970 ;
+  END
+END gf180mcu_as_sc_mcu7t3v3__dyn_dfxtp_2
+
+
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
 MACRO gf180mcu_as_sc_mcu7t3v3__fill_1
   CLASS CORE SPACER ;
   FOREIGN gf180mcu_as_sc_mcu7t3v3__fill_1 ;

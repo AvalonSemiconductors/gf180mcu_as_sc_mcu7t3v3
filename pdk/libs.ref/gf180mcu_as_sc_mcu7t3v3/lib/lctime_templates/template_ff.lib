@@ -322,6 +322,67 @@ library(gf180mcu_as_sc_mcu7t3v3__ff_n40C_3v60) {
 		}
 	}
 	
+	cell (gf180mcu_as_sc_mcu7t3v3__dyn_dfxtp_2) {
+		cell_footprint : gf180mcu_as_sc_mcu7t3v3__dyn_dfxtp;
+		area : 43.904000;
+		
+		ff (IQ, IQN) {
+			clocked_on : "CLK";
+			next_state : "D";
+		}
+		
+		pg_pin(VPW) {
+			voltage_name : VPW;
+			pg_type : pwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VNW) {
+			voltage_name : VNW;
+			pg_type : nwell;
+			physical_connection : device_layer;
+		}
+		
+		pg_pin(VDD) {
+			voltage_name : VDD;
+			related_bias_pin : VNW;
+			pg_type : primary_power;
+		}
+		
+		pg_pin(VSS) {
+			voltage_name : VSS;
+			related_bias_pin : VPW;
+			pg_type : primary_ground;
+		}
+		
+		pin (CLK) {
+			direction : input;
+			clock : "true";
+			related_ground_pin : "VSS";
+			related_power_pin : "VDD";
+			max_transition : 1.0;
+
+		}
+		
+		pin (D) {
+			direction : input;
+			clock : "false";
+			related_ground_pin : "VSS";
+			related_power_pin : "VDD";
+			max_transition : 1.0;
+
+		}
+		
+		pin (Q) {
+			direction : output;
+			function : "IQ";
+			related_ground_pin : "VSS";
+			related_power_pin : "VDD";
+			max_transition : 1.5;
+
+		}
+	}
+	
 	cell (gf180mcu_as_sc_mcu7t3v3__dfxtp_2) {
 		cell_footprint : gf180mcu_as_sc_mcu7t3v3__dfxtp;
 		area : 59.270400;

@@ -7,6 +7,7 @@ public class GenMaskhints {
 	public static void main(String[] args) {
 		try {
 			for(int i = 0; i < args.length; i++) {
+				if(args[i].contains("tap")) continue;
 				List<String> lines = new ArrayList<String>(32);
 				BufferedReader br = new BufferedReader(new FileReader(new File(args[i])));
 				int[] nwellDims = new int[4];
