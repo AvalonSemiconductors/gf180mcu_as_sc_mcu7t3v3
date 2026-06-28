@@ -181,6 +181,9 @@ echo dlybuff_2
 echo dlybuff_4
 ./characterize.sh gf180mcu_as_sc_mcu7t3v3__dlybuff_4 "0.0005, 0.003, 0.016, 0.068, 0.14, 0.71, 1.55" "$slew_times" $corner
 
+echo dyn_dfxtp_2
+./characterize_flop.sh gf180mcu_as_sc_mcu7t3v3__dyn_dfxtp_2 "0.0005, 0.00186, 0.006, 0.019, 0.0621, 0.2, 0.775" "0.01, 0.02, 0.04, 0.09, 0.2, 0.45, 1.0" "0.01, 0.5, 1.0" $corner
+
 echo dfxtp_2
 ./characterize_flop.sh gf180mcu_as_sc_mcu7t3v3__dfxtp_2 "0.0005, 0.00186, 0.006, 0.019, 0.0621, 0.2, 0.775" "0.01, 0.02, 0.04, 0.09, 0.2, 0.45, 1.0" "0.01, 0.5, 1.0" $corner
 
