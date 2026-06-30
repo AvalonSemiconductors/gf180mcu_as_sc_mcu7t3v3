@@ -83,6 +83,23 @@ assign Q = state;
 
 endmodule
 
+module gf180mcu_as_sc_mcu7t3v3__dyn_dfxtp_2(
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+	
+	input CLK,
+	input D,
+	output Q
+);
+
+reg state;
+always @(posedge CLK) state <= D;
+assign Q = state;
+
+endmodule
+
 module gf180mcu_as_sc_mcu7t3v3__dfxtp_4(
 	input VPW,
 	input VNW,
