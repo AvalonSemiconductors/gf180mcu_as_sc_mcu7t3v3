@@ -18,7 +18,7 @@ jobs:
       - name: Install required packages
         run: |
           sudo apt-get update && sudo apt-get install -y klayout
-          pip3 install klayout
+          pip3 install klayout ciel
       - uses: actions/checkout@v6
       - uses: ./.github/actions/build_magic
       - name: Clone PDK
@@ -52,7 +52,7 @@ jobs:
       - name: Install required packages
         run: |
           sudo apt-get update && sudo apt-get install ngspice
-          pip3 install git+https://codeberg.org/TholinVali/lctime
+          pip3 install git+https://codeberg.org/TholinVali/lctime ciel
       - uses: actions/checkout@v6
       - uses: ./.github/actions/build_magic
       - name: Clone PDK
@@ -86,7 +86,7 @@ jobs:
       - name: Install required packages
         run: |
           sudo apt-get update && sudo apt-get install ngspice
-          pip3 install git+https://codeberg.org/TholinVali/lctime
+          pip3 install git+https://codeberg.org/TholinVali/lctime ciel
       - uses: actions/checkout@v6
       - uses: ./.github/actions/build_magic
       - name: Clone PDK
@@ -120,7 +120,7 @@ jobs:
       - name: Install required packages
         run: |
           sudo apt-get update && sudo apt-get install ngspice
-          pip3 install git+https://codeberg.org/TholinVali/lctime
+          pip3 install git+https://codeberg.org/TholinVali/lctime ciel
       - uses: actions/checkout@v6
       - uses: ./.github/actions/build_magic
       - name: Clone PDK
