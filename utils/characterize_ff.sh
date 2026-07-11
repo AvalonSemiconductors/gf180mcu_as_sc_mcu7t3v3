@@ -82,6 +82,9 @@ echo mux2_2
 echo mux2_4
 ./characterize.sh gf180mcu_as_sc_mcu7t3v3__mux2_4 "0.0005, 0.003, 0.016, 0.068, 0.14, 0.71, 1.55" "$slew_times" $corner
 
+echo mux4_2
+./characterize.sh gf180mcu_as_sc_mcu7t3v3__mux4_2 "0.0005, 0.00222, 0.01, 0.037, 0.091, 0.36, 0.777" "$slew_times" $corner
+
 echo maj3_2
 ./characterize.sh gf180mcu_as_sc_mcu7t3v3__maj3_2 "0.0005, 0.00222, 0.01, 0.037, 0.091, 0.36, 0.774" "$slew_times" $corner
 
@@ -147,6 +150,18 @@ echo ao211_2
 
 echo ao211_4
 ./characterize.sh gf180mcu_as_sc_mcu7t3v3__ao211_4 "0.0005, 0.003, 0.016, 0.068, 0.14, 0.71, 1.544" "$slew_times" $corner
+
+echo oai21_2
+./characterize.sh gf180mcu_as_sc_mcu7t3v3__oai21_2 "0.0005, 0.001502, 0.00489, 0.0125, 0.039, 0.146, 0.405" "$slew_times" $corner
+
+echo oai21_4
+./characterize.sh gf180mcu_as_sc_mcu7t3v3__oai21_4 "0.0005, 0.00201, 0.0091, 0.03203, 0.0833, 0.398, 0.81" "$slew_times" $corner
+
+echo oa21_2
+./characterize.sh gf180mcu_as_sc_mcu7t3v3__oa21_2 "0.0005, 0.00222, 0.01, 0.037, 0.091, 0.36, 0.78" "$slew_times" $corner
+
+echo oa21_4
+./characterize.sh gf180mcu_as_sc_mcu7t3v3__oa21_4 "0.0005, 0.003, 0.016, 0.068, 0.14, 0.71, 1.551" "$slew_times" $corner
 
 echo oai211_2
 ./characterize.sh gf180mcu_as_sc_mcu7t3v3__oai211_2 "0.0005, 0.001501, 0.0046, 0.0111, 0.037, 0.11, 0.395" "$slew_times" $corner

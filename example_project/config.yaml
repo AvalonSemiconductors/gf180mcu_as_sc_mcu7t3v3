@@ -4,7 +4,6 @@ meta:
   substituting_steps:
     +Magic.DRC: KLayout.Antenna
     +Checker.MagicDRC: Checker.KLayoutAntenna
-    +Checker.MaxCapViolations: KLayout.Render
 
 # DO CHANGE
 DESIGN_NAME: user_project_example
@@ -34,4 +33,16 @@ FP_PIN_ORDER_CFG: dir::pin_order.cfg
 FP_PDN_MULTILAYER: false
 FP_SIZING: absolute
 
+KLAYOUT_DRC_THREADS: 1
+KLAYOUT_DRC_OPTIONS:
+  workers: max
+  decks: "all,-antenna,-density"
+
+KLAYOUT_ANTENNA_OPTIONS:
+  workers: max
+  decks: "antenna"
+
 STD_CELL_LIBRARY: "gf180mcu_as_sc_mcu7t3v3"
+KLAYOUT_RENDER_RESOLUTION: 8192
+KLAYOUT_RENDER_OVERSAMPLING: 3
+KLAYOUT_PROPERTIES: dir::gf180mcu_render.lyp

@@ -1,5 +1,6 @@
 PDK?=gf180mcuD
 PDK_ROOT?=./gf180mcu_pdk/
+PDK_COMMIT ?= 019cf7a3e0de79bb0e4b6213758882d283c65816
 
 project:
 	librelane --pdk $(PDK) --pdk-root $(PDK_ROOT) --run-tag latest --overwrite --manual-pdk --hide-progress-bar config.yaml
@@ -18,8 +19,7 @@ magic:
 	magic -d OGL runs/latest/final/mag/user_project_example.mag
 
 clone-pdk:
-	rm -rf gf180mcu_pdk
-	git clone https://github.com/wafer-space/gf180mcu.git gf180mcu_pdk --depth 1
+	ciel enable $(PDK_COMMIT) --pdk-root $(PDK_ROOT) --pdk-family $(PDK) --include-libraries all
 
 setup:
 	cp -r ../pdk/libs.* gf180mcu_pdk/gf180mcuD

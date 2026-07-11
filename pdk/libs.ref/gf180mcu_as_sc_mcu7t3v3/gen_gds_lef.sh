@@ -17,6 +17,7 @@ echo "calma;lef write -pinonly;" | magic -rcfile automated.magicrc -dnull -nocon
 echo "calma;lef write -pinonly;" | magic -rcfile automated.magicrc -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__xnor2_4.mag";
 echo "calma;lef write -pinonly;" | magic -rcfile automated.magicrc -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__xor2_2.mag";
 echo "calma;lef write -pinonly;" | magic -rcfile automated.magicrc -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__xor2_4.mag";
+echo "calma;lef write -pinonly;" | magic -rcfile automated.magicrc -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__mux2_4.mag";
 
 rm -rf gds/
 mkdir gds/

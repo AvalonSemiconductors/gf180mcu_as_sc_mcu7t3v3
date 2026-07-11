@@ -1,0 +1,33 @@
+meta:
+  version: 3
+  flow: Classic
+  substituting_steps:
+    +Magic.DRC: KLayout.Antenna
+    +Checker.MagicDRC: Checker.KLayoutAntenna
+    +Checker.MaxCapViolations: KLayout.Render
+
+# DO CHANGE
+DESIGN_NAME: test_counter
+VERILOG_FILES: ["dir::test_counter.v"]
+CLOCK_PERIOD: 26
+DIE_AREA: [0, 0, 250, 250]
+DESIGN_REPAIR_TIE_FANOUT: true
+DIODE_ON_PORTS: both
+RUN_MAGIC_DRC: true
+DRT_ANTENNA_REPAIR_ITERS: 15
+GRT_ANTENNA_REPAIR_ITERS: 15
+
+
+# DO NOT CHANGE
+RUN_CTS: true
+MAX_FANOUT_CONSTRAINT: 4
+CLOCK_PORT: clk_i
+VDD_NETS: ["VDD"]
+GND_NETS: ["VSS"]
+VERILOG_POWER_DEFINE: "USE_POWER_PINS"
+RT_MAX_LAYER: Metal4
+FP_PIN_ORDER_CFG: dir::pin_order.cfg
+FP_PDN_MULTILAYER: false
+FP_SIZING: absolute
+
+STD_CELL_LIBRARY: "gf180mcu_as_sc_mcu7t3v3"
