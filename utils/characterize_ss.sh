@@ -185,7 +185,7 @@ echo clkbuff_4
 ./characterize.sh gf180mcu_as_sc_mcu7t3v3__clkbuff_4 "0.0005, 0.0025, 0.012, 0.046, 0.08, 0.45, 0.983" "$slew_times" $corner
 
 echo clkbuff_8
-./characterize.sh gf180mcu_as_sc_mcu7t3v3__clkbuff_8 "0.0005, 0.003, 0.015, 0.052, 0.148, 0.707, 1.54" "$slew_times" $corner
+./characterize.sh gf180mcu_as_sc_mcu7t3v3__clkbuff_8 "0.0005, 0.00321, 0.016, 0.0621, 0.173, 0.888, 1.97" "$slew_times" $corner
 
 echo clkbuff_12
 ./characterize.sh gf180mcu_as_sc_mcu7t3v3__clkbuff_12 "0.0005, 0.0023, 0.011, 0.05, 0.23, 1.1, 5.0" "0.01, 0.029, 0.08, 0.22, 0.621, 1.77, 5.0" $corner
