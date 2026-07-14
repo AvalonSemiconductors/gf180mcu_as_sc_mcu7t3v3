@@ -21,7 +21,6 @@ echo "calma;lef write -pinonly;" | magic -rcfile automated.magicrc -dnull -nocon
 
 rm -rf gds/
 mkdir gds/
-mv *.gds gds/
 
 for filename in *.lef; do
 sed -i 's/END LIBRARY//' $filename;
@@ -62,4 +61,6 @@ rm -f *.nodes
 rm -f *.sim
 rm -rf temp/
 
-python3 gen_merged_gds.py gds/*
+python3 gen_merged_gds.py *.gds
+mv gf180mcu_as_sc_mcu7t3v3__merged.gds gds/gf180mcu_as_sc_mcu7t3v3.gds
+rm -f *.gds
