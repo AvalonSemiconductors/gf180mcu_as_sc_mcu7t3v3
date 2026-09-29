@@ -41,7 +41,7 @@ assign dut_in[25:24] = 0;
 tri0 [15:0] bus_out = dut_out[15:0];
 
 //TRANSPARENT address latch
-reg [31:0] addr_latch;
+reg [31:0] addr_latch = 32'hFFFFFFFF;
 wire [31:0] full_addr = {le_hi ? bus_out : addr_latch[31:16], le_lo ? bus_out : addr_latch[15:0]};
 
 always @(negedge le_lo) addr_latch[15:0] <= bus_out;
@@ -54,7 +54,7 @@ wire [15:0] mem_out = {memory[(full_addr[14:0] << 1) | 1], memory[(full_addr[14:
 assign dut_in[15:0] = bus_dir && !OEb ? mem_out : 16'hzzzz; //bus_in
 
 always @(posedge WEb_lo) begin
-	memory[full_addr[14:0] << 1] <= bus_out[7:0];
+	if(rst_n) memory[full_addr[14:0] << 1] <= bus_out[7:0];
 	if(full_addr == 'h00200006) begin
 		$write("%c", bus_out[7:0]);
 		$fflush();
@@ -65,7 +65,7 @@ always @(posedge WEb_lo) begin
 end
 
 always @(posedge WEb_hi) begin
-	memory[(full_addr[14:0] << 1) | 1] <= bus_out[15:8];
+	if(rst_n) memory[(full_addr[14:0] << 1) | 1] <= bus_out[15:8];
 end
 
 initial begin
