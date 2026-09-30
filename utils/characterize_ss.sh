@@ -64,11 +64,29 @@ echo nor2b_4
 echo nor3_2
 ./characterize.sh gf180mcu_as_sc_mcu7t3v3__nor3_2 "0.0005, 0.0011, 0.00304, 0.008, 0.023, 0.06, 0.164" "$slew_times" $corner
 
+echo nor3b_2
+./characterize.sh gf180mcu_as_sc_mcu7t3v3__nor3b_2 "0.0005, 0.0011, 0.00304, 0.008, 0.023, 0.06, 0.166" "$slew_times" $corner
+
+echo nor3bb_2
+./characterize.sh gf180mcu_as_sc_mcu7t3v3__nor3bb_2 "0.0005, 0.0011, 0.00304, 0.008, 0.023, 0.06, 0.165" "$slew_times" $corner
+
 echo and2_2
 ./characterize.sh gf180mcu_as_sc_mcu7t3v3__and2_2 "0.0005, 0.0019, 0.008, 0.027, 0.069, 0.25, 0.493" "$slew_times" $corner
 
 echo and2_4
 ./characterize.sh gf180mcu_as_sc_mcu7t3v3__and2_4 "0.0005, 0.0025, 0.012, 0.046, 0.08, 0.45, 0.986" "$slew_times" $corner
+
+echo and3_2
+./characterize.sh gf180mcu_as_sc_mcu7t3v3__and3_2 "0.0005, 0.0019, 0.008, 0.027, 0.069, 0.25, 0.493" "$slew_times" $corner
+
+echo and3_4
+./characterize.sh gf180mcu_as_sc_mcu7t3v3__and3_4 "0.0005, 0.0025, 0.012, 0.046, 0.08, 0.45, 0.986" "$slew_times" $corner
+
+echo and4_2
+./characterize.sh gf180mcu_as_sc_mcu7t3v3__and4_2 "0.0005, 0.0019, 0.008, 0.027, 0.069, 0.25, 0.493" "$slew_times" $corner
+
+echo and4_4
+./characterize.sh gf180mcu_as_sc_mcu7t3v3__and4_4 "0.0005, 0.0025, 0.012, 0.046, 0.08, 0.45, 0.986" "$slew_times" $corner
 
 echo or2_2
 ./characterize.sh gf180mcu_as_sc_mcu7t3v3__or2_2 "0.0005, 0.0019, 0.008, 0.027, 0.069, 0.25, 0.493" "$slew_times" $corner
