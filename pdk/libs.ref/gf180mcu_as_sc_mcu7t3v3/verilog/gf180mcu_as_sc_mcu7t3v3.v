@@ -350,6 +350,20 @@ assign Y = !A;
 
 endmodule
 
+module gf180mcu_as_sc_mcu7t3v3__inv_8(
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+	
+	input A,
+	output Y
+);
+
+assign Y = !A;
+
+endmodule
+
 module gf180mcu_as_sc_mcu7t3v3__invz_2(
 	input VPW,
 	input VNW,
@@ -755,6 +769,72 @@ module gf180mcu_as_sc_mcu7t3v3__or2_4(
 );
 
 assign Y = A | B;
+
+endmodule
+
+module gf180mcu_as_sc_mcu7t3v3__or3_2(
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+
+	input A,
+	input B,
+	input C,
+	output Y
+);
+
+assign Y = A | B | C;
+
+endmodule
+
+module gf180mcu_as_sc_mcu7t3v3__or3_4(
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+
+	input A,
+	input B,
+	input C,
+	output Y
+);
+
+assign Y = A | B | C;
+
+endmodule
+
+module gf180mcu_as_sc_mcu7t3v3__or4_2(
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+
+	input A,
+	input B,
+	input C,
+	input D,
+	output Y
+);
+
+assign Y = A | B | C | D;
+
+endmodule
+
+module gf180mcu_as_sc_mcu7t3v3__or4_4(
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+
+	input A,
+	input B,
+	input C,
+	input D,
+	output Y
+);
+
+assign Y = A | B | C | D;
 
 endmodule
 
