@@ -16,7 +16,7 @@ v {xschem version=3.1.0 file_version=1.2
 G {}
 K {type=primitive
 function4="0 1 & 2 3 | |"
-format="@name @VDD @VNW @VPW @VSS @@X @@A @@B @@C @@D @@Y @prefix\\\\ao211_4"
+format="@name @VDD @VNW @VPW @VSS @@Y @@A @@B @@C @@D @@Y @prefix\\\\ao211_4"
 template="name=x1 VDD=VDD VNW=VNW VPW=VPW VSS=VSS prefix=gf180mcu_as_sc_mcu7t3v3__ "
 extra="VDD VNW VPW VSS prefix"
 verilogprefix=gf180mcu_as_sc_mcu7t3v3__
