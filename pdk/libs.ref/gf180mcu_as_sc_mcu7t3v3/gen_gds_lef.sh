@@ -13,12 +13,12 @@ done
 for filename in temp/*; do
 echo "calma;lef write;extract all;ext2spice lvs;ext2spice cthresh 100000;ext2spice extresist off;ext2spice;" | magic -rcfile automated.magicrc -dnull -noconsole $filename;
 done
-echo "calma;lef write -pinonly;" | magic -rcfile automated.magicrc -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__xnor2_2.mag";
-echo "calma;lef write -pinonly;" | magic -rcfile automated.magicrc -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__xnor2_4.mag";
-echo "calma;lef write -pinonly;" | magic -rcfile automated.magicrc -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__xor2_2.mag";
-echo "calma;lef write -pinonly;" | magic -rcfile automated.magicrc -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__xor2_4.mag";
-echo "calma;lef write -pinonly;" | magic -rcfile automated.magicrc -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__mux2_4.mag";
-echo "calma;lef write -pinonly;" | magic -rcfile automated.magicrc -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__oai211_4.mag";
+echo "calma;lef write ;" | magic -rcfile automated.magicrc -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__xnor2_2.mag";
+echo "calma;lef write ;" | magic -rcfile automated.magicrc -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__xnor2_4.mag";
+echo "calma;lef write ;" | magic -rcfile automated.magicrc -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__xor2_2.mag";
+echo "calma;lef write ;" | magic -rcfile automated.magicrc -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__xor2_4.mag";
+echo "calma;lef write ;" | magic -rcfile automated.magicrc -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__mux2_4.mag";
+echo "calma;lef write ;" | magic -rcfile automated.magicrc -dnull -noconsole "temp/gf180mcu_as_sc_mcu7t3v3__oai211_4.mag";
 
 rm -rf gds/
 mkdir gds/
