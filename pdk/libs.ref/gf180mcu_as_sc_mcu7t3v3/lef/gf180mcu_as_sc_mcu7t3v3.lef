@@ -11533,4 +11533,300 @@ MACRO gf180mcu_as_sc_mcu7t3v3__xor2_4
 END gf180mcu_as_sc_mcu7t3v3__xor2_4
 
 
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO gf180mcu_as_sc_mcu7t3v3__xor3_2
+  CLASS CORE ;
+  FOREIGN gf180mcu_as_sc_mcu7t3v3__xor3_2 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 11.760 BY 3.920 ;
+  SYMMETRY X Y ;
+  SITE unithd ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.620 11.760 4.220 ;
+        RECT 1.805 3.230 2.035 3.620 ;
+        RECT 4.790 3.285 5.130 3.620 ;
+        RECT 6.390 3.285 6.730 3.620 ;
+        RECT 8.790 3.285 9.770 3.620 ;
+        RECT 11.085 2.080 11.315 3.620 ;
+    END
+  END VDD
+  PIN VNW
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Nwell ;
+        RECT -0.430 1.770 12.190 4.350 ;
+    END
+  END VNW
+  PIN VPW
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Pwell ;
+        RECT -0.430 -0.430 12.190 1.770 ;
+    END
+  END VPW
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.205 0.300 0.435 0.690 ;
+        RECT 1.805 0.300 2.035 0.690 ;
+        RECT 4.205 0.300 4.435 0.690 ;
+        RECT 6.445 0.300 6.675 0.690 ;
+        RECT 9.485 0.300 9.715 0.690 ;
+        RECT 11.085 0.300 11.315 1.470 ;
+        RECT 0.000 -0.300 11.760 0.300 ;
+    END
+  END VSS
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 1.237600 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 10.140 0.530 10.660 3.390 ;
+    END
+  END Y
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 1.332800 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 2.045 2.930 2.425 2.960 ;
+        RECT 0.665 2.700 2.915 2.930 ;
+        RECT 0.665 1.550 0.895 2.700 ;
+        RECT 3.420 1.550 3.795 1.980 ;
+      LAYER Via1 ;
+        RECT 2.105 2.700 2.365 2.960 ;
+        RECT 3.475 1.625 3.735 1.885 ;
+      LAYER Metal2 ;
+        RECT 2.045 2.690 3.745 2.970 ;
+        RECT 3.465 1.550 3.745 2.690 ;
+    END
+  END B
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 1.332800 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 1.265 2.240 2.995 2.470 ;
+        RECT 1.265 1.550 1.660 2.240 ;
+        RECT 2.460 1.550 2.995 2.240 ;
+    END
+  END A
+  PIN C
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 1.332800 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 6.105 1.525 6.435 1.965 ;
+        RECT 7.350 0.990 7.680 2.135 ;
+      LAYER Via1 ;
+        RECT 6.115 1.645 6.375 1.905 ;
+        RECT 7.365 1.645 7.625 1.905 ;
+      LAYER Metal2 ;
+        RECT 6.055 1.635 7.685 1.915 ;
+    END
+  END C
+  OBS
+      LAYER Metal1 ;
+        RECT 0.205 1.150 0.435 3.390 ;
+        RECT 2.550 3.160 4.490 3.390 ;
+        RECT 7.190 3.160 8.385 3.390 ;
+        RECT 8.155 3.055 8.385 3.160 ;
+        RECT 5.465 3.010 6.335 3.055 ;
+        RECT 4.740 2.930 6.335 3.010 ;
+        RECT 3.350 2.825 6.335 2.930 ;
+        RECT 8.155 2.825 8.895 3.055 ;
+        RECT 3.350 2.780 5.695 2.825 ;
+        RECT 3.350 2.700 4.920 2.780 ;
+        RECT 4.520 2.640 4.920 2.700 ;
+        RECT 1.965 1.150 2.195 1.945 ;
+        RECT 4.520 1.380 4.750 2.640 ;
+        RECT 6.105 2.595 6.335 2.825 ;
+        RECT 4.290 1.150 4.750 1.380 ;
+        RECT 5.645 1.210 5.875 2.550 ;
+        RECT 6.105 2.365 8.435 2.595 ;
+        RECT 6.705 1.210 6.935 1.945 ;
+        RECT 8.205 1.550 8.435 2.365 ;
+        RECT 8.665 1.980 8.895 2.825 ;
+        RECT 8.665 1.550 9.445 1.980 ;
+        RECT 8.665 1.220 8.895 1.550 ;
+        RECT 0.205 0.920 2.195 1.150 ;
+        RECT 2.550 0.920 4.520 1.150 ;
+        RECT 5.645 0.980 6.935 1.210 ;
+        RECT 7.930 0.990 8.895 1.220 ;
+        RECT 1.005 0.530 1.235 0.920 ;
+        RECT 5.645 0.760 5.875 0.980 ;
+        RECT 4.790 0.530 5.875 0.760 ;
+        RECT 7.190 0.530 9.130 0.760 ;
+  END
+END gf180mcu_as_sc_mcu7t3v3__xor3_2
+
+
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO gf180mcu_as_sc_mcu7t3v3__xor3_4
+  CLASS CORE ;
+  FOREIGN gf180mcu_as_sc_mcu7t3v3__xor3_4 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 13.440 BY 3.920 ;
+  SYMMETRY X Y ;
+  SITE unithd ;
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.620 13.440 4.220 ;
+        RECT 1.805 3.230 2.035 3.620 ;
+        RECT 4.790 3.285 5.130 3.620 ;
+        RECT 6.390 3.285 6.730 3.620 ;
+        RECT 8.790 3.285 9.770 3.620 ;
+        RECT 11.085 2.210 11.315 3.620 ;
+        RECT 12.685 2.210 12.915 3.620 ;
+    END
+  END VDD
+  PIN VNW
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Nwell ;
+        RECT -0.430 1.770 13.870 4.350 ;
+    END
+  END VNW
+  PIN VPW
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Pwell ;
+        RECT -0.430 -0.430 13.870 1.770 ;
+    END
+  END VPW
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    SHAPE ABUTMENT ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.205 0.300 0.435 0.690 ;
+        RECT 1.805 0.300 2.035 0.690 ;
+        RECT 4.205 0.300 4.435 0.690 ;
+        RECT 6.445 0.300 6.675 0.690 ;
+        RECT 9.485 0.300 9.715 0.690 ;
+        RECT 11.085 0.300 11.315 1.330 ;
+        RECT 12.685 0.300 12.915 1.330 ;
+        RECT 0.000 -0.300 13.440 0.300 ;
+    END
+  END VSS
+  PIN Y
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 2.475200 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 10.140 1.980 10.660 3.390 ;
+        RECT 11.740 1.980 12.260 3.390 ;
+        RECT 10.140 1.560 12.260 1.980 ;
+        RECT 10.140 0.530 10.660 1.560 ;
+        RECT 11.740 0.530 12.260 1.560 ;
+    END
+  END Y
+  PIN B
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 1.332800 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 2.045 2.930 2.425 2.960 ;
+        RECT 0.665 2.700 2.915 2.930 ;
+        RECT 0.665 1.550 0.895 2.700 ;
+        RECT 3.420 1.550 3.795 1.980 ;
+      LAYER Via1 ;
+        RECT 2.105 2.700 2.365 2.960 ;
+        RECT 3.475 1.625 3.735 1.885 ;
+      LAYER Metal2 ;
+        RECT 2.045 2.690 3.745 2.970 ;
+        RECT 3.465 1.550 3.745 2.690 ;
+    END
+  END B
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 1.332800 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 1.265 2.240 2.995 2.470 ;
+        RECT 1.265 1.550 1.660 2.240 ;
+        RECT 2.460 1.550 2.995 2.240 ;
+    END
+  END A
+  PIN C
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 1.332800 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 6.105 1.525 6.435 1.965 ;
+        RECT 7.350 0.990 7.680 2.135 ;
+      LAYER Via1 ;
+        RECT 6.115 1.645 6.375 1.905 ;
+        RECT 7.365 1.645 7.625 1.905 ;
+      LAYER Metal2 ;
+        RECT 6.055 1.635 7.685 1.915 ;
+    END
+  END C
+  OBS
+      LAYER Metal1 ;
+        RECT 0.205 1.150 0.435 3.390 ;
+        RECT 2.550 3.160 4.490 3.390 ;
+        RECT 7.190 3.160 8.385 3.390 ;
+        RECT 8.155 3.055 8.385 3.160 ;
+        RECT 5.465 3.010 6.335 3.055 ;
+        RECT 4.740 2.930 6.335 3.010 ;
+        RECT 3.350 2.825 6.335 2.930 ;
+        RECT 8.155 2.825 8.895 3.055 ;
+        RECT 3.350 2.780 5.695 2.825 ;
+        RECT 3.350 2.700 4.920 2.780 ;
+        RECT 4.520 2.640 4.920 2.700 ;
+        RECT 1.965 1.150 2.195 1.945 ;
+        RECT 4.520 1.380 4.750 2.640 ;
+        RECT 6.105 2.595 6.335 2.825 ;
+        RECT 4.290 1.150 4.750 1.380 ;
+        RECT 5.645 1.210 5.875 2.550 ;
+        RECT 6.105 2.365 8.435 2.595 ;
+        RECT 6.705 1.210 6.935 1.945 ;
+        RECT 8.205 1.550 8.435 2.365 ;
+        RECT 8.665 1.980 8.895 2.825 ;
+        RECT 8.665 1.550 9.445 1.980 ;
+        RECT 8.665 1.220 8.895 1.550 ;
+        RECT 0.205 0.920 2.195 1.150 ;
+        RECT 2.550 0.920 4.520 1.150 ;
+        RECT 5.645 0.980 6.935 1.210 ;
+        RECT 7.930 0.990 8.895 1.220 ;
+        RECT 1.005 0.530 1.235 0.920 ;
+        RECT 5.645 0.760 5.875 0.980 ;
+        RECT 4.790 0.530 5.875 0.760 ;
+        RECT 7.190 0.530 9.130 0.760 ;
+  END
+END gf180mcu_as_sc_mcu7t3v3__xor3_4
+
+
 END LIBRARY

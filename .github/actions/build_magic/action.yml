@@ -16,7 +16,7 @@ runs:
       shell: bash
       working-directory: ./magic
       run: |
-        git checkout 8.3.637
+        git checkout 8.3.695
         export CFLAGS="${CFLAGS} -std=c17 -D_DEFAULT_SOURCE=1"
         ./configure
         make

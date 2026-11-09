@@ -898,6 +898,38 @@ assign Y = A != B;
 
 endmodule
 
+module gf180mcu_as_sc_mcu7t3v3__xor3_2(
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+
+	input A,
+	input B,
+	input C,
+	output Y
+);
+
+assign Y = A ^ B ^ C;
+
+endmodule
+
+module gf180mcu_as_sc_mcu7t3v3__xor3_4(
+	input VPW,
+	input VNW,
+	input VDD,
+	input VSS,
+
+	input A,
+	input B,
+	input C,
+	output Y
+);
+
+assign Y = A ^ B ^ C;
+
+endmodule
+
 module gf180mcu_as_sc_mcu7t3v3__maj3_2(
 	input VPW,
 	input VNW,

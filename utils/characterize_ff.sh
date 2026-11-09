@@ -121,6 +121,12 @@ echo xor2_2
 echo xor2_4
 ./characterize.sh gf180mcu_as_sc_mcu7t3v3__xor2_4 "0.0005, 0.003, 0.016, 0.068, 0.14, 0.71, 1.54" "$slew_times" $corner
 
+echo xor3_2
+./characterize.sh gf180mcu_as_sc_mcu7t3v3__xor3_2 "0.0005, 0.00222, 0.01, 0.037, 0.091, 0.36, 0.777" "$slew_times" $corner
+
+echo xor3_4
+./characterize.sh gf180mcu_as_sc_mcu7t3v3__xor3_4 "0.0005, 0.003, 0.016, 0.068, 0.14, 0.71, 1.55" "$slew_times" $corner
+
 echo mux2_2
 ./characterize.sh gf180mcu_as_sc_mcu7t3v3__mux2_2 "0.0005, 0.00222, 0.01, 0.037, 0.091, 0.36, 0.774" "$slew_times" $corner
 

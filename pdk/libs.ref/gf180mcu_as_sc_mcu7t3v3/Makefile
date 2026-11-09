@@ -7,7 +7,7 @@ characterize_tt:
 	mkdir characterize
 	cp mag/*.mag characterize/
 	cp ../../../utils/*.sh characterize/
-	cp lib/lctime_templates/template_tt.lib characterize/template.lib
+	cp lib/lctime_templates/template_typical.lib characterize/template.lib
 	cd characterize && sh characterize_tt.sh
 	cp characterize/merged.lib lib/gf180mcu_as_sc_mcu7t3v3__tt_025C_3v30.lib
 	rm -rf characterize
